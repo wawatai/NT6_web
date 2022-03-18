@@ -1,0 +1,87 @@
+footer {
+    width: 100%;
+    height: auto;
+
+    //上部
+    .top {
+        width: 100%;
+        height: 55px;
+        background: $footer_BG1;
+
+        .center {
+            width: 1400px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+
+            .btnBox {
+                width: auto;
+                height: 100%;
+
+                ul {
+                    display: flex;
+                    width: auto;
+                    height: 100%;
+
+                    li {
+                        width: 90px;
+                        height: 100%;
+                        margin-right: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        color: $footer_Word1;
+                        font-weight: bold;
+                        font-size: 14px;
+                        box-sizing: border-box;
+
+                        &:hover,&:active,&.active {
+                            color: $mainFont_2;
+                            width: 149px;
+                            padding-left: 12px;
+                        }
+                    }
+                }
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: bold;
+                color: $footer_Word2;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    //下部
+    .footerList {
+        width: 100%;
+        height: 160px;
+        background: $footer_BG2;
+
+        .center {
+            width: 1400px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            p {
+                font-size: 14px;
+                font-weight: bold;
+                color: $footer_Word3;
+
+                &:last-child {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

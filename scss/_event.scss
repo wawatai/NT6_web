@@ -1,0 +1,235 @@
+.eventWrap {
+
+    .eventTitle {
+        width: 100%;
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        p {
+            font-size: 61px;
+            color: $title_1;
+            font-weight: bold;
+        }
+    }
+    
+    .eventBody {
+        width: 1400px;
+        height: auto;
+        min-height: 350px;
+        padding: 28px 0 56px;
+        margin: 0 auto;
+        display: flex;
+
+        .side {
+            width: 357px;
+            margin-right: 13px;
+            height: auto;
+            background: $mainBG_1;
+            border: solid 1px $mainBorder_2;
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: solid 1px $mainBorder_2;
+                    position: relative;
+                    cursor: pointer;
+
+                    &:hover,&:active,&.active {
+                        @include navHover;
+
+                        i {
+                            background: none;
+
+                            &::before {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    i {
+                        display: block;
+                        width: 23px;
+                        height: 23px;
+                        margin: 0 28px;
+                        overflow: hidden;
+                        position: relative;
+
+                        &::before {
+                            display: none;
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: -23px;
+                            top: 0;
+                            filter: drop-shadow(23px 0px 0px #ffffff);
+                        }
+                    }
+
+                    span {
+                        font-weight: bold;
+                        font-size: 22px;
+                        color: $mainFont_1;
+                    }
+                }
+            }
+        }
+
+        .eventList {
+            display: none;
+            width: 1028px;
+
+            &.display {
+                display: block;
+            }
+
+            .eventBox {
+                background: $mainBG_1;
+                border: solid 1px $mainBorder_2;
+                display: flex;
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                ul {
+                    width: 252px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 30px 27px;
+
+                    .title {
+                        font-size: 29px;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        color: $title_1;
+                    }
+
+                    .btnBox {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+
+                        &.twin {
+                            justify-content: space-around;
+
+                            button {
+
+                                &:last-child {
+                                    display: block;
+                                }
+                            }
+                        }
+
+                        button {
+                            width: 117px;
+                            height: 37px;
+                            @include mainBtn;
+
+                            &:last-child {
+                                display: none;
+                                @include eventApply;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .eventDetail {
+            display: none;
+            width: 1028px;
+            background: $mainBG_1;
+            border: solid 1px $mainBorder_2;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                padding: 22px 40px 18px;
+
+                p {
+                    font-size: 34px;
+                    font-weight: bold;
+                    color: $title_1;
+                }
+
+                button {
+                    width: 135px;
+                    height: 36px;
+                    margin-top: 18px;
+                    @include eventBtn;
+
+                    &:hover,&:active,&.active {
+
+                        i {
+                            filter: brightness(0.1);
+                        }
+                    }
+
+                    i {
+                        display: inline-block;
+                        width: 17px;
+                        height: 17px;
+                        margin: 0 10px -2px 0;
+                    }
+                }
+            }
+
+            .info {
+                padding: 25px 40px;
+                
+                .infoTitle {
+                    font-size: 26px;
+                    font-weight: bold;
+                    margin-bottom: 30px;
+                    color: $title_2;
+                }
+
+                ul {
+                    list-style: disc;
+                    margin: 10px 0;
+
+                    &.rule {
+                        margin-top: 30px;
+
+                        li {
+                            font-weight: bold;
+                        }
+                    }
+
+                    li {
+                        font-size: 16px;
+                        color: $mainFont_1;
+                        line-height: 20px;
+                        margin-bottom: 5px;
+
+                        &.remind {
+                            color: $remind;
+                        }
+                    }
+                }
+            }
+
+            .detailFooter {
+                width: 100%;
+                height: 130px;
+                padding-bottom: 60px;
+            }
+        }
+    }
+}

@@ -1,0 +1,366 @@
+header {
+    width: 100%;
+    height: 120px;
+    position: relative;
+    background: $header_BG_1;
+
+    //上部
+    .top {
+        width: 1400px;
+        height: 40px;
+        margin: 0px auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        //左
+        // .brad {
+        //     font-size: 22px;
+        //     font-weight: bold;
+        //     display: flex;
+        //     align-items: center;
+        //     color: $fontColor_1;
+
+        //     //時間
+        //     .time {
+        //         font-size: 16px;
+        //         margin-left: 10px;
+        //         color: $fontColor_1;
+        //     }
+        // }
+
+        //右
+        .user {
+            width: auto;
+            height: 100%;
+            align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+            display: none;
+
+            &.display {
+                display: flex;
+            }
+
+            &.alLogin {
+
+                li:not(.platform) {
+                    margin-right: 10px;
+
+                    button {
+                        width: auto;
+                        height: auto;
+                        @include headerBtn_3;
+
+                        &.logoutBtn {
+                            @include headerBtn_1;
+                            padding: 3px 10px;
+                        }
+
+                        .remind {
+                            min-width: 18px;
+                            min-height: 18px;
+                            @include headerMailRemind;
+                        }
+                    }
+
+                    &.lang {
+                        
+                        select {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            li:not(.platform) {
+                display: flex;
+                width: auto;
+                height: 100%;
+                align-items: center;
+                position: relative;
+
+                //未登入選單
+                .loginForm {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    div {
+                        position: relative;
+
+                        input {
+                            width: 180px;
+                            height: 30px;
+                            margin-right: 8px;
+                            @include mainInput;
+                        }
+                    }
+
+                    button {
+                        width: auto;
+                        height: 28px;
+                        @include headerBtn_1;
+
+                        &.signupBtn {
+                            margin-left: 8px;
+                            @include headerBtn_2;
+                        }
+                    }
+                }
+
+                //等級
+                &.lv {
+                    color: $header_LV_1;
+                    font-weight: bold;
+                    padding-right: 10px;
+
+                    span {
+                        color: $header_LV_2;
+                        padding-right: 10px;
+                    }
+                }
+
+                //忘記密碼
+                &.forget {
+                    margin-left: 10px;
+                    @include headerForget;
+
+                    i {
+                        display: block;
+                        width: 19px;
+                        height: 19px;
+                        margin-right: 5px;
+                    }
+                }
+
+                //transfer
+                &.moneyTotal {
+
+                    .total {
+                        width: auto;
+                        height: auto;
+                        @include headerMoney;
+                    }
+
+                    .transferInfo {
+                        width: 290px;
+                        height: auto;
+                        top: 40px;
+                        @include headerMoneyList;
+
+                        &.display {
+                            display: block;
+                        }
+
+                        li {
+                            width: 100%;
+                            height: 47px;
+
+                            div {
+
+                                .money {
+                                    
+                                    i {
+                                        display: none;
+                                        position: absolute;
+                                        width: 20px;
+                                        height: 20px;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        right: -6px;
+                                        animation: circle 1s linear infinite;
+
+                                        &.display {
+                                            display: block;
+                                        }
+                                    }
+
+                                    @keyframes circle {
+                                        0% {
+                                            transform: translateY(-50%) rotate(0deg);
+                                        }
+
+                                        100% {
+                                            transform: translateY(-50%) rotate(360deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                //語言列
+                &.lang {
+                    
+                    select {
+                        width: auto;
+                        height: auto;
+                        @include headerLang;
+                        margin-left: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    //選單
+    .gameNav {
+        width: 100%;
+        height: 80px;
+        background: $header_BG_2;
+
+        .center {
+            width: 1400px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            ul {
+                width: auto;
+                height: 100%;
+                display: flex;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    width: auto;
+                    height: 100%;
+                    padding: 0 25px;
+                    font-size: 18px;
+                    margin: 0 5px;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    box-sizing: border-box;
+                    border-bottom: solid 4px transparent;
+                    color: $headerNav_Word;
+                    font-weight: bold;
+
+                    &:hover,&:active,&.active {
+                        border-color: $headerNav_Border;
+                        color: $headerNav_Hover;
+                    }
+                }
+            }
+        }
+    }
+
+    //下拉式選單
+    .topGameList {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        left: 0px;
+        bottom: -227px;
+        z-index: 10;
+        box-shadow: 0 3px 10px 0 $topGameList_Shadow;
+
+        &.display {
+            height: auto;
+        }
+
+        .listWrap {
+            width: 100%;
+            height: 226px;
+            background: $topGameList_BG;
+            border-bottom: solid 1px $topGameList_Border;
+
+            .center {
+                width: 1400px;
+                height: 100%;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    display: none;
+                    width: 15px;
+                    height: 30px;
+                    cursor: pointer;
+
+                    &.prev {
+                        margin-right: 10px;
+                    }
+
+                    &.next {
+                        transform: scaleX(-1);
+                        margin-left: 10px;
+                    }
+
+                    &.display {
+                        display: block;
+                    }
+                }
+
+                .container {
+                    width: 1320px;
+                    height: 100%;
+                    overflow: hidden;
+
+                    ul {
+                        display: none;
+                        width: 100%;
+                        height: 100%;
+                        transition: 0.6s ease;
+
+                        &.display {
+                            display: flex;
+                        }
+
+                        li {
+                            cursor: pointer;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            position: relative;
+
+                            p {
+                                font-size: 14px;
+                                padding-top: 8px;
+                                text-align: center;
+                                font-weight: bold;
+                                color: $mainFont_1;
+                            }
+
+                            .fixBox {
+                                display: none;
+                                position: absolute;
+                                width: 92%;
+                                height: 92%;
+                                border-radius: 5px;
+                                background: $filter;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%,-50%);
+                                cursor: not-allowed;
+
+                                &.display {
+                                    display: flex;
+                                }
+        
+                                p {
+                                    color: $mainFont_2;
+                                    font-size: 14px;
+                                    font-weight: bold;
+
+                                    &.title {
+                                        margin-bottom: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
