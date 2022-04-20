@@ -2,15 +2,15 @@
 
     .download {
         position: fixed;
-        left: 10px;
-        top: 240px;
+        left: 15px;
+        top: 190px;
         z-index: 1;
-        width: 46px;
-        height: 185px;
+        width: 60px;
+        height: auto;
         font-size: 20px;
         font-weight: bold;
         writing-mode: vertical-lr;
-        letter-spacing: 3px;
+        letter-spacing: 8px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -19,26 +19,13 @@
         background: $sideBar_BG1;
         border: solid 1px $sideBar_Border1;
         box-sizing: border-box;
-        padding: 30px 10px 0;
         border-radius: 30px;
-
-        &::before {
-            content: "";
-            position: absolute;
-            width: 62px;
-            height: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: -15px;
-        }
+        padding: 24px 15px;
 
         i {
-            width: 62px;
-            height: 62px;
-            position: absolute;
-            left: 50%;
-            top: -15px;
-            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            margin-bottom: 20px;
         }
     }
 
@@ -56,27 +43,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: $sideBar_BG2;
-            border: solid 1px $sideBar_Border2;
+            background: $sideBar_BG1;
+            border: solid 1px $sideBar_Border1;
             cursor: pointer;
-            margin-bottom: 25px;
-            transform: rotate(45deg);
+            margin-bottom: 15px;
+            border-radius: 50px;
+            transition: 0.2s all;
 
             &:hover,&:active,&.active {
-                filter: brightness(1.2);
-            }
-
-            &.invite {
-                width: 54px;
-                height: 55px;
-                transform: rotate(0deg);
-                border: none;
+                transform: scale(1.2);
             }
 
             i {
                 width: 30px;
                 height: 30px;
-                transform: rotate(-45deg);
             }
         }
     }

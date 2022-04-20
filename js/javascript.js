@@ -76,7 +76,7 @@ $(function(){
         n ++;
         $(slwp).css("transform","translateX("+(-220 * n)+"px)");
 
-        if(n == 3){
+        if(n == 1){
             n --;
         }
     })
@@ -130,7 +130,6 @@ $(function(){
         $('header .fishBtn,.topGameList .fish li,.typeList .fish').attr("onclick","window.location.href='./html/fishPage.html'");
         $('header .boardBtn,.topGameList .board li,.typeList .board').attr("onclick","window.location.href='./html/boardPage.html'");
         $('header .event').attr("onclick","window.location.href='./html/event.html'");
-        $('header .vip').attr("onclick","window.location.href='./html/vip.html'");
 
         $('.topGameList .sport li,.typeList .sport').attr("onclick","openSportGame()");
         $('.topGameList .live li,.typeList .live').attr("onclick","openLiveGame()");
@@ -140,7 +139,7 @@ $(function(){
 
 //.transferInfo display
 $(function(){
-    $('.moneyTotal').click(function(){
+    $('.user.alLogin .total').click(function(){
         $('.transferInfo').toggleClass('display');
     })
 })
@@ -207,7 +206,7 @@ $(function(){
         $('.jumpWindow').removeClass('display');
         $('.filter,.plsGo').addClass('display');
     })
-    $(".registerWrap .checkBox span").click(function(){
+    $(".registerWrap .check span").click(function(){
         $('.jumpWindow').removeClass('display');
         $('.filter,.ruleWindow').addClass('display');
     })
@@ -242,33 +241,33 @@ function openBoardGame(){
 }
 
 //gameWrap小遊戲格hover切換左大圖
-$(function(){
-    $(".livePage .btnBox li:eq(0)").hover(function(){
-        $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_1.png")
-    })
-    $(".livePage .btnBox li:eq(1)").hover(function(){
-        $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_2.png")
-    })
-    $(".livePage .btnBox li:eq(2)").hover(function(){
-        $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_3.png")
-    })
-    $(".livePage .btnBox li:eq(3)").hover(function(){
-        $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_4.png")
-    })
-    $(".livePage .btnBox li:eq(4)").hover(function(){
-        $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_5.png")
-    })
+// $(function(){
+//     $(".livePage .btnBox li:eq(0)").hover(function(){
+//         $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_1.png")
+//     })
+//     $(".livePage .btnBox li:eq(1)").hover(function(){
+//         $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_2.png")
+//     })
+//     $(".livePage .btnBox li:eq(2)").hover(function(){
+//         $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_3.png")
+//     })
+//     $(".livePage .btnBox li:eq(3)").hover(function(){
+//         $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_4.png")
+//     })
+//     $(".livePage .btnBox li:eq(4)").hover(function(){
+//         $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_5.png")
+//     })
 
-    $(".lotteryPage .btnBox li:eq(0)").hover(function(){
-        $(".lotteryPage .mainImg").attr("src","../images/廠商圖/lottery/lotteryBG_1.png")
-    })
-    $(".lotteryPage .btnBox li:eq(1)").hover(function(){
-        $(".lotteryPage .mainImg").attr("src","../images/廠商圖/lottery/lotteryBG_2.png")
-    })
-    $(".lotteryPage .btnBox li:eq(2)").hover(function(){
-        $(".lotteryPage .mainImg").attr("src","../images/廠商圖/lottery/lotteryBG_3.png")
-    })
-})
+//     $(".lotteryPage .btnBox li:eq(0)").hover(function(){
+//         $(".lotteryPage .mainImg").attr("src","../images/廠商圖/lottery/lotteryBG_1.png")
+//     })
+//     $(".lotteryPage .btnBox li:eq(1)").hover(function(){
+//         $(".lotteryPage .mainImg").attr("src","../images/廠商圖/lottery/lotteryBG_2.png")
+//     })
+//     $(".lotteryPage .btnBox li:eq(2)").hover(function(){
+//         $(".lotteryPage .mainImg").attr("src","../images/廠商圖/lottery/lotteryBG_3.png")
+//     })
+// })
 
 //jumpWindow .new .content
 $(function(){
@@ -533,38 +532,20 @@ $(function(){
 })
 //helpPage .nav 連動切換
 $(function(){
-    $('.forNew_1').click(function(){
-        $('.newHelp_1').addClass('display');
-        $('.newHelp_1').siblings().removeClass('display');
-    })
-    $('.forNew_2').click(function(){
-        $('.newHelp_2').addClass('display');
-        $('.newHelp_2').siblings().removeClass('display');
-    })
-    $('.forNew_3').click(function(){
-        $('.newHelp_3').addClass('display');
-        $('.newHelp_3').siblings().removeClass('display');
-    })
-    $('.forNew_4').click(function(){
-        $('.newHelp_4').addClass('display');
-        $('.newHelp_4').siblings().removeClass('display');
-    })
-    $('.forNew_5').click(function(){
-        $('.newHelp_5').addClass('display');
-        $('.newHelp_5').siblings().removeClass('display');
+    $('.forNew').click(function(){
+        var n = $(this).index();
+
+        $(".newHelp:eq("+ n +")")
+        .addClass("display")
+        .siblings().removeClass("display");
     })
 
-    $('.forQues_1').click(function(){
-        $('.question_1').addClass('display');
-        $('.question_1').siblings().removeClass('display');
-    })
-    $('.forQues_2').click(function(){
-        $('.question_2').addClass('display');
-        $('.question_2').siblings().removeClass('display');
-    })
-    $('.forQues_3').click(function(){
-        $('.question_3').addClass('display');
-        $('.question_3').siblings().removeClass('display');
+    $('.forQues').click(function(){
+        var n = $(this).index();
+
+        $(".question:eq("+ n +")")
+        .addClass("display")
+        .siblings().removeClass("display");
     })
 
     $('.forUs_1').click(function(){
@@ -603,5 +584,13 @@ $(function(){
     $('.forApp_3').click(function(){
         $('.download_3').addClass('display');
         $('.download_3').siblings().removeClass('display');
+    })
+})
+
+//register choose切換
+$(function(){
+    $(".registerWrap .choose li").click(function(){
+        $(this).removeClass("display");
+        $(this).siblings().addClass("display")
     })
 })

@@ -40,10 +40,10 @@
         }
 
         .slick-dots {
-            bottom: 30px;
+            bottom: 0;
 
             li {
-                margin: 0 10px;
+                margin: 0 8px;
 
                 &.slick-active {
 
@@ -58,11 +58,10 @@
                 button {
 
                     &::before {
-                        width: 16px;
-                        height: 16px;
-                        background: #a17a52;
+                        width: 30px;
+                        height: 2px;
+                        background: $ad_Dot;
                         color: transparent;
-                        transform: rotate(45deg);
                     }
                 }
             }

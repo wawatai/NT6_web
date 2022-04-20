@@ -1,23 +1,42 @@
 //背景
-.bg {
-    background: url('../images/bg.jpg') no-repeat top center;
+.mainWrap {
+    background: url('../images/bg.jpg') no-repeat center;
     background-size: cover;
 }
 
+//header Input
+header .loginForm .id_ic {
+    background: url('../images/icon/svg/id.svg') no-repeat;
+}
+header .loginForm .pwd_ic {
+    background: url('../images/icon/svg/pwd.svg') no-repeat;
+}
 //忘記密碼
 header .forget i {
-    background: url('../images/icon/question.png') no-repeat;
-    background-size: 100%;
-}
-//header money選單箭頭
-header .moneyTotal .total::before {
-    background: url('../images/icon/smallArrow_brown.png') no-repeat;
+    background: url('../images/icon/svg/question.svg') no-repeat;
     background-size: 100%;
 }
 //header 登入後下選單旋轉圖
 header .transferInfo .money i {
     background: url('../images/icon/svg/loading_g.svg') no-repeat;
     background-size: 100%;
+}
+//header登入後IC
+header .user.alLogin i {
+    background: url('../images/icon/headerIC.png') no-repeat;
+    background-size: 300%;
+}
+header .user.alLogin i.member_ic {
+    background: url('../images/icon/svg/member.svg') no-repeat center;
+    background-size: 76%;
+}
+header .user.alLogin i.mail_ic {
+    background: url('../images/icon/svg/letter.svg') no-repeat center;
+    background-size: 92%;
+}
+header .user.alLogin i.exit_ic {
+    background: url('../images/icon/svg/signout.svg') no-repeat center;
+    background-size: 80%;
 }
 
 //下拉選單 topGameList arrow
@@ -28,12 +47,8 @@ header .transferInfo .money i {
 
 //側邊 sideBar img
 .download i {
-    background: url('../images/icon/download.png') no-repeat;
-    background-size: 100%;
-}
-.download::before {
-    background: url('../images/icon/downloadArrow.png') no-repeat;
-    background-size: 100%;
+    background: url('../images/icon/svg/download.svg') no-repeat;
+    background-size: contain;
 }
 .rightSide .service i {
     background: url('../images/icon/svg/notice.svg') no-repeat;
@@ -50,21 +65,8 @@ header .transferInfo .money i {
 
 //跑馬燈
 .marqueeWrap .marquee_ic {
-    background: url('../images/icon/marqueeIC.png') no-repeat;
-    background-size: 100%;
-}
-.marqueeWrap::before,
-.marqueeWrap::after {
-    background: url('../images/icon/marqueeArrow.png') no-repeat;
-    background-size: 100%;
-}
-
-//footer
-footer .top li:hover,
-footer .top li:active,
-footer .top li.active {
-    background: url('../images/footerHover.png') no-repeat center;
-    background-size: 100%;
+    background: url('../images/icon/svg/marquee.svg') no-repeat;
+    background-size: contain;
 }
 
 //jumpWindow ic
@@ -86,7 +88,7 @@ footer .top li.active {
 .gameWrap {
     background: url('../images/bg.jpg') no-repeat;
     background-size: cover;
-    background-position-y: -120px;
+    background-attachment: fixed;
 }
 
 //.slotCenter .slotBody .nav .serach
@@ -109,11 +111,6 @@ footer .top li.active {
     background-size: 100%;
 }
 
-//evevtTitle
-.eventTitle {
-    background: url('../images/eventTitle_bg.jpg') no-repeat;
-    background-size: cover;
-}
 //eventBody .side li i
 .eventBody .event_ic,
 .eventBody .event_ic::before {
@@ -126,7 +123,12 @@ footer .top li.active {
     background-size: 100%;
 }
 
-//innerSdie .innerNav li i
+//innerSide .innerNav li i
+.innerSide .userInfo .btn {
+    background: url('../images/icon/walletInner.png') no-repeat;
+    background-size: 300%;
+}
+
 .innerNav .user_ic,
 .innerNav .user_ic::before {
     background: url('../images/icon/svg/innerNav_user.svg') no-repeat;
@@ -262,21 +264,12 @@ footer .top li.active {
     background-size: 100%;
 }
 
-//.rightSide .smallBoard .arrow
-.rightSide .smallBoard .arrow {
-    background: url('../images/icon/svg/arrow_r.svg') no-repeat;
-    background-size: 100%;
-}
-
 //.mailWrap.innerMode .title .arrow_ic
-.mailWrap.innerMode .title .arrow_ic {
+.mailWrap.innerMode .title .arrow_ic,
+.mailWrap.innerMode .msgTitle .prev,
+.mailWrap.innerMode .msgTitle .next {
     background: url('../images/icon/svg/arrow_r.svg') no-repeat;
     background-size: 100%;
-}
-//.mailWrap.innerMode .msgTitle prev,next
-.mailWrap.innerMode .msgTitle .prev,.mailWrap.innerMode .msgTitle .next {
-    background: url('../images/icon/svg/arrow_g.svg') no-repeat center;
-    background-size: 11px 19px;
 }
 
 //.betWrap .fakeTalbe .arrow_ic
@@ -315,7 +308,7 @@ footer .top li.active {
 }
 
 //.withdrawalWrap .smallTitle reset_ic
-.withdrawalWrap .smallTitle .reset_ic {
+.withdrawalWrap .smallTitle .reset_ic::before {
     background: url('../images/icon/svg/refresh.svg') no-repeat;
     background-size: 100%;
 }
@@ -348,16 +341,12 @@ footer .top li.active {
     background: url('../images/icon/svg/bulb.svg') no-repeat;
     background-size: 100%;
 }
-.helpPage .nav .problem {
-    background: url('../images/icon/svg/helpProblem.svg') no-repeat;
-    background-size: 100%;
-}
 .helpPage .nav .aboutUs {
     background: url('../images/icon/svg/aboutus.svg') no-repeat;
     background-size: 100%;
 }
 .helpPage .nav .downloadIC{
-    background: url('../images/icon/download.png') no-repeat;
+    background: url('../images/icon/svg/helpDownload.svg') no-repeat;
     background-size: 100%;
 }
 //helpPage .teachList arrow_ic
@@ -392,23 +381,18 @@ footer .top li.active {
     background: url('../images/bg.jpg') no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position-y: -300px;
 }
-.registerWrap .person_ic {
+.registerWrap .register_ic {
     background: url('../images/icon/svg/register.svg') no-repeat;
     background-size: 100%;
-}
-.registerWrap i:not(.eye) {
-    background: url('../images/icon/signupIC.png') no-repeat;
-    background-size: 500%;
 }
 .registerWrap .eye {
     background: url('../images/icon/svg/eye.svg') no-repeat;
     background-size: 100%;
 }
-.registerWrap .right {
-    background: url('../images/register_background2.png') no-repeat;
-    background-size: cover;
+.registerWrap .hasID i {
+    background: url('../images/icon/lineWechat.png') no-repeat;
+    background-size: 100%;
 }
 
 //invite
@@ -421,26 +405,31 @@ footer .top li.active {
     background-size: 100%;
 }
 
+//bg
+.bg {
+    background: url('../images/bg.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 
 ////////img↓↓↓↓↓↓↓↓↓
 
 
+//logo
+header .logo {
+    width: 224px;
+}
 //header 下拉選單
 header .topGameList div {
-    width: 220px;
-    height: 184px;
+    width: 120px;
+    height: 120px;
 
     img {
         width: 100%;
         height: 100%;
         object-fit: contain;
     }
-}
-//logo
-header .logo {
-    width: 240px;
-    height: 70px;
-    object-fit: cover;
 }
 
 //banner
@@ -452,19 +441,18 @@ header .logo {
 
 //入口頁中央遊戲入口圖 .mainWrap .img
 .mainWrap .typeList img {
-    width: 338px;
-    height: 270px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
 //gameWrap img
 .gameWrap .mainImg {
-    width: 675px;
-    height: 732px;
+    width: 670px;
 }
 .gameWrap .btnBox img {
-    width: 189px;
-    height: 185px;
+    width: 176px;
+    height: 103px;
     object-fit: cover;
     object-position: top;
 
@@ -530,8 +518,14 @@ header .logo {
 }
 
 //register .logo
-.registerWrap .left img {
-    width: 250px;
+.registerWrap .title .logo {
+    width: 233px;
+    height: 78px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 //右側小活動中心

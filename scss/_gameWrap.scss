@@ -1,85 +1,7 @@
 .gameWrap {
-    padding-bottom: 30px;
 
     &.slot {
-        background-position-y: 0;
-    }
-
-    //跑馬燈
-    .marqueeArea {
-        width: 1400px;
-        height: 40px;
-        background: $marquee_BG;
-        border-radius: 25px;
-        margin: 0 auto;
-        border: solid 1px $marquee_Border;
-
-        .center {
-            width: 100%;
-            height: 100%;
-
-            .marqueeWrap {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                position: relative;
-
-                &::before,&::after {
-                    content: "";
-                    position: absolute;
-                    width: 49px;
-                    height: 71px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-                &::before {
-                    left: -20px;
-                    transform: scaleX(-1) translateY(-50%);
-                    z-index: 1;
-                }
-                &::after {
-                    right: -20px;
-                }
-
-                .marquee_ic {
-                    width: 65px;
-                    height: 65px;
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    left: 6px;
-                    z-index: 1;
-                }
-
-                .marquee {
-                    width: 98%;
-                    height: auto;
-                    overflow: hidden;
-
-                    p {
-                        font-size: 14px;
-                        font-weight: bold;
-                        color: $marquee_Word;
-                        display: inline-block;
-                        animation: marquee 10s linear infinite;
-                        padding-left: 100%;
-                        white-space: nowrap;
-                    }
-
-                    @keyframes marquee {
-                        0% {
-                            transform: translate(0%);
-                        }
-
-                        100% {
-                            transform: translate(-100%);
-                        }
-                    }
-                }
-            }
-        }
+        min-height: 755px;
     }
 
     //主內容
@@ -87,8 +9,6 @@
         width: 100%;
         min-width: 1400px;
         height: auto;
-        margin-bottom: 48px;
-        padding-top: 70px;
 
         &.slotPage {
             width: 1400px;
@@ -101,11 +21,11 @@
             height: auto;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
         }
 
         .textBox {
-            width: 630px;
+            width: 590px;
             height: auto;
             padding-top: 148px;
 
@@ -137,7 +57,7 @@
                 line-height: 24px;
                 font-size: 14px;
                 font-weight: bold;
-                color: $remind;
+                color: $mainFont_2;
             }
         }
 
@@ -165,7 +85,7 @@
                             width: 100%;
                             text-align: center;
                             font-size: 14px;
-                            color: $mainFont_1;
+                            color: $mainFont_2;
                             padding-top: 5px;
                         }
                     }
@@ -179,20 +99,17 @@
         width: 1400px;
         height: auto;
         margin: 0 auto;
-        padding: 25px 0;
-
-        .marqueeArea {
-            margin-bottom: 25px;
-        }
+        padding: 70px 0;
 
         .slotBody {
-            background: $mainBG_1;
+            background: $gameWrap_SlotBG;
             border: solid 1px $mainBorder_2;
+            border-radius: 5px;
 
             .nav {
                 margin: 0 26px;
                 height: 70px;
-                border-bottom: solid 1px $mainBorder_1;
+                border-bottom: solid 1px $mainBorder_2;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -203,7 +120,7 @@
                     display: flex;
 
                     li {
-                        color: $choose_Word;
+                        color: $gameWrap_SlotChoose;
                         width: auto;
                         height: calc(100% - 3px);
                         padding: 0 50px;
@@ -217,8 +134,7 @@
                         font-weight: bold;
     
                         &:hover,&:active,&.active {
-                            color: $choose_Active;
-                            border-color: $choose_Border;
+                            border-color: $gameWrap_SlotBoard;
 
                             &::before {
                                 content: "";
@@ -230,7 +146,7 @@
                                 bottom: 0;
                                 border-style: solid;
                                 border-width: 0 6px 6px;
-                                border-color: $choose_Border transparent;
+                                border-color: $gameWrap_SlotBoard transparent;
                             }
                         }
                     }
@@ -253,8 +169,7 @@
                     input {
                         width: 330px;
                         height: 40px;
-                        @include mainInput;
-                        padding-left: 40px;
+                        @include gameWrapInput;
                     }
                 }
             }
@@ -299,20 +214,12 @@
                                 height: 40px;
                                 font-size: 18px;
 
-                                &:hover,&:active,&.active {
-                                    
-                                    i {
-                                        filter: brightness(1);
-                                    }
-                                }
-
                                 i {
                                     display: inline-block;
                                     width: 8px;
                                     height: 15px;
                                     transform: scaleX(-1);
                                     margin-left: 20px;
-                                    filter: brightness(0.1);
                                 }
                             }
                             .back {
@@ -340,8 +247,8 @@
                             li {
                                 width: 250px;
                                 height: 200px;
-                                border: solid 1px $mainBorder_2;
-                                border-radius: 5px;
+                                border: solid 2px $mainBorder_2;
+                                border-radius: 10px;
                                 overflow: hidden;
                                 cursor: pointer;
                                 box-sizing: border-box;
@@ -370,13 +277,12 @@
                                     justify-content: space-between;
                                     position: relative;
                                     z-index: 1;
-                                    border-top: solid 1px $mainBorder_2;
                                     background: $gameWrap_WordBG;
 
                                     p {
                                         font-size: 18px;
                                         font-weight: bold;
-                                        color: $mainFont_1;
+                                        color: $gameWrap_Word;
                                     }
 
                                     .love {
@@ -390,7 +296,7 @@
                                     position: absolute;
                                     width: 100%;
                                     height: 165px;
-                                    background: $filter;
+                                    background: $filter_1;
                                     top: 0px;
                                     left: 0px;
                                     display: flex;

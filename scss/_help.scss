@@ -1,8 +1,8 @@
 .helpPage {
     width: 100%;
     height: auto;
-    min-height: 565px;
-    padding-bottom: 42px;
+    min-height: 672px;
+    padding: 42px 0;
 
     .center {
         width: 1400px;
@@ -12,10 +12,11 @@
         justify-content: space-between;
         
         .nav {
-            background: $mainBG_1;
+            background: $event_LeftBG;
             width: 390px;
             height: auto;
             border: solid 1px $mainBorder_2;
+            border-radius: 5px;
 
             li {
                 width: 100%;
@@ -55,15 +56,15 @@
                         i {
                             display: block;
                             width: 20px;
-                            height: 20px;
+                            height: 24px;
                             margin-right: 23px;
-    
-                            &.bulb {
-                                height: 24px;
-                            }
 
                             &.aboutUs {
                                 height: 28px;
+                            }
+
+                            &.downloadIC {
+                                height: 21px;
                             }
                         }
                     }
@@ -74,12 +75,13 @@
                         transition: 0.3s all;
                         transform: rotate(180deg);
                         margin-right: 23px;
+                        filter: grayscale(1) brightness(30);
                     }
                 }
 
                 &.box {
                     display: none;
-                    background: $mainBG_2;
+                    background: $help_boxBG;
 
                     &.display {
                         display: block;
@@ -99,10 +101,11 @@
                             align-items: center;
                             font-size: 18px;
                             font-weight: bold;
-                            color: $mainFont_1;
+                            color: $mainFont_2;
     
                             &:hover,&:active,&.active {
-                                @include navHover;
+                                background: $event_ActiveBG;
+                                color: $event_ActiveWord;
 
                                 &::before {
                                     display: none;
@@ -117,11 +120,12 @@
         .helpWrap {
             width: 980px;
             height: auto;
-            background: $mainBG_1;
+            background: $event_RightBG;
             border: solid 1px $mainBorder_2;
             margin-bottom: 40px;
             box-sizing: border-box;
             padding: 44px 58px;
+            border-radius: 5px;
 
             div {
                 display: none;
@@ -164,6 +168,40 @@
                     color: $mainFont_1;
                     font-size: 16px;
                     line-height: 24px;
+                    font-weight: bold;
+
+                    span {
+                        color: $remind;
+                    }
+                }
+
+                ul {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    padding-left: 16px;
+
+                    li {
+                        list-style: decimal;
+                        color: $mainFont_1;
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: bold;
+                        margin-bottom: 23px;
+
+                        span {
+                            color: $remind;
+                        }
+                    }
+
+                    ul {
+                        width: 100%;
+                        height: auto;
+
+                        li {
+                            list-style: lower-roman;
+                        }
+                    }
                 }
 
                 button {

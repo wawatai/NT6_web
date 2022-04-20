@@ -16,48 +16,69 @@
     <main>
         <div class="registerWrap">
             <div class="bigBox">
-                <div class="left">
-                    <img src="../images/icon/logo.png">
-                </div>
-                <form class="right">
-                    <div class="title">註冊</div>
-                    <label>
-                        <i class="acc_ic"></i>
-                        <input type="text" placeholder="請輸入帳號">
-                        <p class="err">帳號須包含一個英文字母(大小寫皆可);最少六個字元</p>
-                    </label>
-                    <label>
-                        <i class="pass_ic"></i>
-                        <input type="password" placeholder="請輸入密碼">
-                        <p class="err">數字英文,及限定的特殊符號(@._$#%^&*+-)可使用</p>
-                        <i class="eye"></i>
-                    </label>
-                    <label>
-                        <i class="pass_ic"></i>
-                        <input type="password" placeholder="密碼確認">
-                    </label>
-                    <label>
-                        <i class="phone_ic"></i>
-                        <input type="text" placeholder="手機">
-                        <p class="err">電話號碼必須為10個數字</p>
-                        <button type="button" class="send">取得驗證碼</button>
-                    </label>
-                    <label>
-                        <i class="phone_ic"></i>
-                        <input type="text" placeholder="手機驗證碼">
-                    </label>
-                    <label>
-                        <i class="mail_ic"></i>
-                        <input type="text" placeholder="邀請碼">
-                    </label>
-                    <p class="tips">如無推薦的代理可不填寫</p>
-                    <div class="checkBox">
-                        <input type="checkbox">
-                        <p>已閱讀並同意<span>相關條款與隱私政策</span></p>
+                <div class="title">
+                    <div class="logo">
+                        <img src="../images/icon/logo.png">
                     </div>
-                    <button class="checkBtn" disabled>確認</button>
-                    <button class="checkBtn" type="button" onclick="window.location.href='../index.html'">進去逛逛</button>
-                </form>
+                    <i class="register_ic"></i>
+                    Đăng ký
+                </div>
+                <div class="content">
+                    <div class="inputBox">
+                        <label class="pad">
+                            <input type="text" placeholder="Vui lòng nhập tài khoản">
+                            <p class="err">Tài khoản phải có một chữ cái tiếng Anh (Viết hoa hay viết thường đều được); ít nhất có sáu ký tự</p>
+                        </label>
+                        <label class="pad">
+                            <input type="text" placeholder="Nhập mật khẩu">
+                            <i class="eye"></i>
+                            <p class="err">Có thể sử dụng các số bằng tiếng Anh và các ký hiệu đặc biệt hạn chế (@ ._ $ #% ^ & * + -)</p>
+                        </label>
+                        <label>
+                            <input type="text" placeholder="Xác nhận mật khẩu">
+                        </label>
+                        <label class="hasID">
+                            <input type="text">
+                            <ul class="choose">
+                                <li class="line display">
+                                    <i></i>
+                                </li>
+                                <li class="wechat">
+                                    <i></i>
+                                </li>
+                            </ul>
+                        </label>
+                    </div>
+                    <div class="inputBox">
+                        <label>
+                            <input type="text" placeholder="Họ tên thật">
+                        </label>
+                        <label>
+                            <input type="text" placeholder="Điện thoại di động">
+                            <button class="send">Nhận mã xác minh</button>
+                        </label>
+                        <label>
+                            <input type="text" placeholder="Mã xác minh điện thoại">
+                        </label>
+                        <label>
+                            <input type="text" placeholder="Mã số lời mời">
+                        </label>
+                        <label>
+                            <p class="err sp">All columns are required</p>
+                        </label>
+                        <div class="check">
+                            <input type="checkbox">
+                            <p>
+                                Đã đọc và đồng ý
+                                <span>Các điều khoản liên quan và chính sách bảo mật</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btnBox">
+                        <button onclick="window.location.href='../index.html'">Vào xem</button>
+                        <button disabled>Xác nhận</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -65,12 +86,12 @@
         <!--單純轉跳彈窗-->
         <div class="jumpWindow plsGo">
             <div class="title">
-                <p>提示</p>
+                <p>Lời nhắc</p>
                 <i class="close_ic"></i>
             </div>
-            <div class="content">電話號碼必須為10個數字</div>
+            <div class="content">Số điện thoại phải có 10 chữ số</div>
             <div class="btnBox">
-                <button class="close">確認</button>
+                <button class="close">Xác nhận</button>
             </div>
         </div>
         <!--相關條款彈窗-->

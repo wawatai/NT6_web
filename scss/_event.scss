@@ -6,6 +6,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        box-sizing: border-box;
+        padding-top: 30px;
     
         p {
             font-size: 61px;
@@ -26,8 +28,10 @@
             width: 357px;
             margin-right: 13px;
             height: auto;
-            background: $mainBG_1;
+            background: $event_LeftBG;
             border: solid 1px $mainBorder_2;
+            border-radius: 5px;
+            overflow: hidden;
 
             ul {
                 width: 100%;
@@ -43,7 +47,11 @@
                     cursor: pointer;
 
                     &:hover,&:active,&.active {
-                        @include navHover;
+                        background: $event_ActiveBG;
+
+                        span {
+                            color: $event_ActiveWord;
+                        }
 
                         i {
                             background: none;
@@ -70,14 +78,14 @@
                             height: 100%;
                             left: -23px;
                             top: 0;
-                            filter: drop-shadow(23px 0px 0px #ffffff);
+                            filter: drop-shadow(23px 0px 0px #672e01);
                         }
                     }
 
                     span {
                         font-weight: bold;
                         font-size: 22px;
-                        color: $mainFont_1;
+                        color: $title_1;
                     }
                 }
             }
@@ -92,10 +100,12 @@
             }
 
             .eventBox {
-                background: $mainBG_1;
+                background: $event_RightBG;
                 border: solid 1px $mainBorder_2;
                 display: flex;
                 margin-bottom: 20px;
+                border-radius: 5px;
+                overflow: hidden;
 
                 &:last-child {
                     margin: 0;
@@ -115,7 +125,7 @@
                         overflow: hidden;
                         text-overflow: ellipsis;
                         white-space: nowrap;
-                        color: $title_1;
+                        color: $mainFont_1;
                     }
 
                     .btnBox {
@@ -123,26 +133,10 @@
                         height: auto;
                         display: flex;
 
-                        &.twin {
-                            justify-content: space-around;
-
-                            button {
-
-                                &:last-child {
-                                    display: block;
-                                }
-                            }
-                        }
-
                         button {
-                            width: 117px;
+                            width: 100%;
                             height: 37px;
-                            @include mainBtn;
-
-                            &:last-child {
-                                display: none;
-                                @include eventApply;
-                            }
+                            @include thirdBtn;
                         }
                     }
                 }
@@ -152,8 +146,10 @@
         .eventDetail {
             display: none;
             width: 1028px;
-            background: $mainBG_1;
+            background: $event_RightBG;
             border: solid 1px $mainBorder_2;
+            border-radius: 5px;
+            overflow: hidden;
 
             &.display {
                 display: block;
@@ -165,33 +161,39 @@
                 p {
                     font-size: 34px;
                     font-weight: bold;
-                    color: $title_1;
+                    color: $title_2;
                 }
 
                 button {
-                    width: 135px;
+                    width: auto;
                     height: 36px;
                     margin-top: 18px;
-                    @include eventBtn;
-
-                    &:hover,&:active,&.active {
-
-                        i {
-                            filter: brightness(0.1);
-                        }
-                    }
+                    @include mainBtn;
+                    padding: 0 8px;
 
                     i {
                         display: inline-block;
                         width: 17px;
                         height: 17px;
-                        margin: 0 10px -2px 0;
+                        margin-bottom: -3px;
                     }
                 }
             }
 
             .info {
                 padding: 25px 40px;
+
+                img {
+                    width: 100%;
+                }
+
+                p:not(.infoTitle) {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: $mainFont_1;
+                    margin: 15px 0;
+                    line-height: 20px;
+                }
                 
                 .infoTitle {
                     font-size: 26px;
@@ -201,22 +203,16 @@
                 }
 
                 ul {
-                    list-style: disc;
                     margin: 10px 0;
-
-                    &.rule {
-                        margin-top: 30px;
-
-                        li {
-                            font-weight: bold;
-                        }
-                    }
+                    padding: 0 17px;
 
                     li {
                         font-size: 16px;
                         color: $mainFont_1;
                         line-height: 20px;
-                        margin-bottom: 5px;
+                        margin-bottom: 10px;
+                        list-style: decimal;
+                        font-weight: bold;
 
                         &.remind {
                             color: $remind;
