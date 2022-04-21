@@ -445,16 +445,9 @@ $gameWrap_SlotBoard: #fbf2d3;
 }
 @mixin mailHover {
     background: #fff8e2;
-    border-color: #bf9755;
 }
 @mixin read {
     background: #f9d6a2;
-
-    .title,
-    .msg,
-    .date {
-        color: #753200;
-    }
 }
 
 //event + help
@@ -469,10 +462,6 @@ $smallMoneyBox_BG: linear-gradient(to bottom,#fffbef 31%,#e7d2ac 100%);
 
 //bettingRecord
 $betRecord_innerBG: #fbe2b7;
-
-//eventApply_表格內hover
-$eventApply_wordBG: linear-gradient(to right, #af5d1c 0%, #6b2f00 100%);
-$eventApply_word: #fff7d8;
 
 
 //button

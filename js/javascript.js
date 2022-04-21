@@ -548,42 +548,12 @@ $(function(){
         .siblings().removeClass("display");
     })
 
-    $('.forUs_1').click(function(){
-        $('.aboutUs_1').addClass('display');
-        $('.aboutUs_1').siblings().removeClass('display');
-    })
-    $('.forUs_2').click(function(){
-        $('.aboutUs_2').addClass('display');
-        $('.aboutUs_2').siblings().removeClass('display');
-    })
-    $('.forUs_3').click(function(){
-        $('.aboutUs_3').addClass('display');
-        $('.aboutUs_3').siblings().removeClass('display');
-    })
-    $('.forUs_4').click(function(){
-        $('.aboutUs_4').addClass('display');
-        $('.aboutUs_4').siblings().removeClass('display');
-    })
-    $('.forUs_5').click(function(){
-        $('.aboutUs_5').addClass('display');
-        $('.aboutUs_5').siblings().removeClass('display');
-    })
-    $('.forUs_6').click(function(){
-        $('.aboutUs_6').addClass('display');
-        $('.aboutUs_6').siblings().removeClass('display');
-    })
+    $('.forApp').click(function(){
+        var n = $(this).index();
 
-    $('.forApp_1').click(function(){
-        $('.download_1').addClass('display');
-        $('.download_1').siblings().removeClass('display');
-    })
-    $('.forApp_2').click(function(){
-        $('.download_2').addClass('display');
-        $('.download_2').siblings().removeClass('display');
-    })
-    $('.forApp_3').click(function(){
-        $('.download_3').addClass('display');
-        $('.download_3').siblings().removeClass('display');
+        $(".download:eq("+ n +")")
+        .addClass("display")
+        .siblings().removeClass("display");
     })
 })
 

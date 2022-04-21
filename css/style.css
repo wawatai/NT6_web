@@ -4245,19 +4245,37 @@ html body .innerPage .center .mailWrap.innerMode .msgTitle span {
   display: inline-block;
   width: 800px;
   font-size: 18px;
-  color: #753200;
+  color: #281600;
 }
-html body .innerPage .center .mailWrap.innerMode .msgTitle button {
+html body .innerPage .center .mailWrap.innerMode .msgTitle button:not(.delete) {
   width: 9px;
   height: 16px;
 }
-html body .innerPage .center .mailWrap.innerMode .msgTitle button.next {
+html body .innerPage .center .mailWrap.innerMode .msgTitle button:not(.delete).next {
   transform: scaleX(-1);
+}
+html body .innerPage .center .mailWrap.innerMode .msgTitle .delete {
+  width: auto;
+  height: auto;
+  background: linear-gradient(to top, #1eb0a4 0%, #26dbcc 100%);
+  border: solid 1px #39ebdd;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 8px;
+}
+html body .innerPage .center .mailWrap.innerMode .msgTitle .delete:hover, html body .innerPage .center .mailWrap.innerMode .msgTitle .delete:active, html body .innerPage .center .mailWrap.innerMode .msgTitle .delete.active {
+  background: linear-gradient(to top, #1eb0a4 0%, #159288 100%);
 }
 html body .innerPage .center .mailWrap.innerMode .date {
   width: 100%;
   font-size: 15px;
-  color: #b36c40;
+  color: #a75819;
   padding-bottom: 18px;
 }
 html body .innerPage .center .mailWrap.innerMode .msg {
@@ -4373,7 +4391,6 @@ html body .innerPage .center .mailWrap .bottom .list .btnBox {
   width: 100%;
   height: auto;
   padding-bottom: 16px;
-  border-bottom: solid 1px #bf9755;
 }
 html body .innerPage .center .mailWrap .bottom .list .btnBox.nor {
   justify-content: flex-end;
@@ -4516,6 +4533,11 @@ html body .innerPage .center .mailWrap .bottom .list .btnBox .all input:checked:
 }
 html body .innerPage .center .mailWrap .bottom .list ul {
   display: none;
+  width: 96%;
+  margin: 0px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  border: solid 1px #713100;
 }
 html body .innerPage .center .mailWrap .bottom .list ul.display {
   display: block;
@@ -4528,20 +4550,17 @@ html body .innerPage .center .mailWrap .bottom .list ul li {
   cursor: pointer;
   background: #feedc5;
 }
+html body .innerPage .center .mailWrap .bottom .list ul li:last-child {
+  border-bottom: none;
+}
 html body .innerPage .center .mailWrap .bottom .list ul li.read {
   background: #f9d6a2;
-}
-html body .innerPage .center .mailWrap .bottom .list ul li.read .title,
-html body .innerPage .center .mailWrap .bottom .list ul li.read .msg,
-html body .innerPage .center .mailWrap .bottom .list ul li.read .date {
-  color: #753200;
 }
 html body .innerPage .center .mailWrap .bottom .list ul li.editing input {
   display: block;
 }
 html body .innerPage .center .mailWrap .bottom .list ul li:hover, html body .innerPage .center .mailWrap .bottom .list ul li:active, html body .innerPage .center .mailWrap .bottom .list ul li.active {
   background: #fff8e2;
-  border-color: #bf9755;
 }
 html body .innerPage .center .mailWrap .bottom .list ul li input {
   display: none;
@@ -4577,7 +4596,7 @@ html body .innerPage .center .mailWrap .bottom .list ul li .title {
   position: relative;
   box-sizing: border-box;
   padding: 0 33px 0 28px;
-  color: #753200;
+  color: #713100;
   font-weight: bold;
 }
 html body .innerPage .center .mailWrap .bottom .list ul li .title::before {
@@ -4595,7 +4614,7 @@ html body .innerPage .center .mailWrap .bottom .list ul li .msg {
   box-sizing: border-box;
   padding: 0 33px;
   position: relative;
-  color: #281600;
+  color: #713100;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -4614,7 +4633,7 @@ html body .innerPage .center .mailWrap .bottom .list ul li .msg::before {
 html body .innerPage .center .mailWrap .bottom .list ul li .date {
   width: 14%;
   text-align: center;
-  color: #b36c40;
+  color: #713100;
 }
 html body .innerPage .center .eventWrap {
   width: 1140px;
@@ -5977,6 +5996,8 @@ html body .innerPage .center .depositWrap .depositMiddle .bottom .content .remin
   font-size: 13px;
   letter-spacing: 1px;
   margin-bottom: 11px;
+  line-height: 16px;
+  font-weight: bold;
 }
 html body .innerPage .center .depositWrap .depositMiddle .bottom .content .remindBox div.title {
   color: #f30f0f;
@@ -6558,21 +6579,25 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul {
   height: auto;
   display: flex;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  width: 202px;
+  justify-content: space-between;
+  width: 48%;
   height: 112px;
-  margin-right: 8px;
-  border: solid 1px #fff8e2;
+  margin: 0 1% 1% 0;
+  border: solid 1px #bf9755;
   border-radius: 5px;
+  background: linear-gradient(to bottom, #fffbef 31%, #e7d2ac 100%);
+  box-sizing: border-box;
+  padding: 10px 0;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul li .name {
   font-size: 17px;
-  color: #fff7d8;
+  color: #753200;
   font-weight: bold;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul li .num span {
@@ -6590,6 +6615,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row
   margin-bottom: 23px;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row p {
+  width: 170px;
   font-size: 14px;
   letter-spacing: 1px;
   color: #753200;
@@ -6603,7 +6629,6 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row div select {
   width: 257px;
   height: 40px;
-  margin-left: 26px;
   border-radius: 3px;
   background: #ffffff;
   border: solid 1px #b16d3d;
@@ -6625,7 +6650,6 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row div input {
   width: 257px;
   height: 40px;
-  margin-left: 26px;
   background: #ffffff;
   border: solid 1px #b16d3d;
   color: #753200;
@@ -6639,7 +6663,8 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row
   color: #ad6026;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row div .remind {
-  margin: 8px 0 0 26px;
+  width: 600px;
+  margin-top: 8px;
   font-size: 12px;
   letter-spacing: 1px;
   color: #f30f0f;
@@ -6647,7 +6672,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form button {
   width: 257px;
   height: 40px;
-  margin-left: 100px;
+  margin-left: 170px;
   background: linear-gradient(to top, #1eb0a4 0%, #26dbcc 100%);
   border: solid 1px #39ebdd;
   color: #ffffff;
@@ -6667,8 +6692,9 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom .remindBo
   box-sizing: border-box;
   padding: 15px 19px;
   margin: 24px 0 0 -10px;
-  border: solid 1px #fff8e2;
+  border: solid 1px #bf9755;
   background: #f6ebadbf;
+  border-radius: 5px;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom .remindBox .remindTitle {
   font-size: 13px;
@@ -6682,13 +6708,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom .remindBo
   letter-spacing: 1px;
   color: #281600;
   font-weight: bold;
-}
-html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom .remindBox p {
-  display: inline;
-  color: #2fd4b6;
-  font-size: 13px;
-  letter-spacing: 1px;
-  font-weight: bold;
+  line-height: 16px;
 }
 html body .innerPage .center .inviteWrap {
   width: 1140px;
