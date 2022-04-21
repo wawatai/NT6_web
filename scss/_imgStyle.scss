@@ -38,6 +38,11 @@ header .user.alLogin i.exit_ic {
     background: url('../images/icon/svg/signout.svg') no-repeat center;
     background-size: 80%;
 }
+//header遊戲人數IC
+header .marqueeArea .people_ic {
+    background: url('../images/icon/peopleIC.png') no-repeat;
+    background-size: contain;
+}
 
 //下拉選單 topGameList arrow
 .topGameList .prev,.topGameList .next {

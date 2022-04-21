@@ -54,6 +54,11 @@ header .user.alLogin i.exit_ic {
   background-size: 80%;
 }
 
+header .marqueeArea .people_ic {
+  background: url("../images/icon/peopleIC.png") no-repeat;
+  background-size: contain;
+}
+
 .topGameList .prev, .topGameList .next {
   background: url("../images/icon/svg/arrow_g.svg") no-repeat;
   background-size: 100%;
@@ -1031,6 +1036,7 @@ html body header .marqueeArea .center {
   width: 1400px;
   height: 100%;
   margin: 0 auto;
+  position: relative;
 }
 html body header .marqueeArea .center .marqueeWrap {
   width: 100%;
@@ -1066,6 +1072,33 @@ html body header .marqueeArea .center .marqueeWrap .marquee p {
   100% {
     transform: translate(-100%);
   }
+}
+html body header .marqueeArea .center .people {
+  width: auto;
+  height: auto;
+  background: linear-gradient(to bottom, #fe3f70 23%, #cf0f57 100%);
+  border: solid 1px #ff5480;
+  border-radius: 3px;
+  color: #fff7d8;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+html body header .marqueeArea .center .people:hover, html body header .marqueeArea .center .people:active, html body header .marqueeArea .center .people.active {
+  background: linear-gradient(to top, #df115e 0%, #820031 100%);
+}
+html body header .marqueeArea .center .people i {
+  display: inline-block;
+  width: 16px;
+  height: 19px;
+  margin-right: 5px;
 }
 html body .ad {
   width: 100%;
@@ -1915,17 +1948,18 @@ html body .filter .jumpWindow.pointWindow .content {
 html body .filter .jumpWindow.pointWindow .content table {
   width: 100%;
   height: auto;
-  box-shadow: 0 0 0 1px #fff8e2;
+  box-shadow: 0 0 0 1px #713100;
+  border-radius: 5px;
+  overflow: hidden;
 }
-html body .filter .jumpWindow.pointWindow .content table tr {
-  border-bottom: solid 1px #fff8e2;
-}
-html body .filter .jumpWindow.pointWindow .content table tr:last-child {
+html body .filter .jumpWindow.pointWindow .content table tr:last-child td {
   border: none;
 }
 html body .filter .jumpWindow.pointWindow .content table tr th {
   vertical-align: middle;
   height: 40px;
+  background: #fff8e2;
+  border-bottom: solid 2px #713100;
 }
 html body .filter .jumpWindow.pointWindow .content table tr th:last-child p {
   border: none;
@@ -1933,13 +1967,15 @@ html body .filter .jumpWindow.pointWindow .content table tr th:last-child p {
 html body .filter .jumpWindow.pointWindow .content table tr th p {
   font-size: 14px;
   font-weight: bold;
-  color: #753200;
+  color: #713100;
   border-right: solid 1px #bf9755;
 }
 html body .filter .jumpWindow.pointWindow .content table tr td {
   width: 50%;
   vertical-align: middle;
   height: 40px;
+  background: #feedc5;
+  border-bottom: solid 1px #bf9755;
 }
 html body .filter .jumpWindow.pointWindow .content table tr td:last-child p {
   border: none;
@@ -6819,45 +6855,62 @@ html body .innerPage .center .inviteWrap .wordBox p {
 }
 html body .innerPage .center .pointWrap {
   width: 1140px;
-  height: auto;
-  background: linear-gradient(to bottom, #af5d1c 0%, #f6ebadbf 100%);
-  border: solid 1px #fff8e2;
-  box-sizing: border-box;
 }
-html body .innerPage .center .pointWrap .title {
-  color: #fff7d8;
+html body .innerPage .center .pointWrap .top {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, #f9f2de 0%, #e7d2ac 100%);
+  color: #753200;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 22px;
+  font-weight: bold;
   font-size: 20px;
   letter-spacing: 2px;
-  font-weight: bold;
-  margin-bottom: 15px;
-  padding: 20px 20px 0;
-  box-sizing: border-box;
+  border-radius: 5px;
+  border: solid 1px #fff8e2;
 }
-html body .innerPage .center .pointWrap .searchBox {
+html body .innerPage .center .pointWrap .bottom {
   width: 100%;
   height: auto;
+  margin-top: 20px;
+}
+html body .innerPage .center .pointWrap .bottom .content {
+  width: 100%;
+  height: auto;
+  background: #f6ebadbf;
+  border-radius: 5px;
+  border: solid 1px #bf9755;
+}
+html body .innerPage .center .pointWrap .bottom .content .search {
+  width: 100%;
+  height: 90px;
   display: flex;
-  margin-top: 30px;
+  align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
   padding: 0 20px;
+  border-bottom: solid 1px #bf9755;
+  box-sizing: border-box;
 }
-html body .innerPage .center .pointWrap .searchBox .left {
-  display: flex;
-}
-html body .innerPage .center .pointWrap .searchBox .left .inputBox {
+html body .innerPage .center .pointWrap .bottom .content .search .dateBox {
   width: auto;
   height: auto;
   display: flex;
   align-items: center;
+}
+html body .innerPage .center .pointWrap .bottom .content .search .dateBox .title {
+  width: 80px;
+  height: auto;
   color: #753200;
   font-size: 14px;
+  margin-right: 25px;
   font-weight: bold;
-  margin-right: 15px;
+  letter-spacing: 1px;
 }
-html body .innerPage .center .pointWrap .searchBox .left .inputBox input {
-  width: 250px;
-  height: 36px;
+html body .innerPage .center .pointWrap .bottom .content .search .dateBox input {
+  width: 258px;
+  height: 42px;
   background: #ffffff;
   border: solid 1px #b16d3d;
   color: #753200;
@@ -6866,35 +6919,35 @@ html body .innerPage .center .pointWrap .searchBox .left .inputBox input {
   border-radius: 3px;
   box-sizing: border-box;
   padding-left: 15px;
-  margin-left: 20px;
 }
-html body .innerPage .center .pointWrap .searchBox .left .inputBox input::placeholder {
+html body .innerPage .center .pointWrap .bottom .content .search .dateBox input::placeholder {
   color: #ad6026;
 }
-html body .innerPage .center .pointWrap .searchBox .left .btnBox {
+html body .innerPage .center .pointWrap .bottom .content .search .dateBox .btnBox {
   width: auto;
   height: auto;
-  display: flex;
+  font-size: 0;
+  margin-left: 15px;
 }
-html body .innerPage .center .pointWrap .searchBox .left .btnBox button {
-  width: 70px;
-  height: 36px;
-  background: linear-gradient(to top, #efbd82 0%, #f8deb8 100%);
-  border: solid 1px #e8e8e8;
+html body .innerPage .center .pointWrap .bottom .content .search .dateBox .btnBox button {
+  width: auto;
+  height: 42px;
+  margin-right: 10px;
+  background: linear-gradient(to bottom, #fff1b0 6%, #dcc16e 52%, #fff1b0 100%);
+  color: #753200;
+  border: solid 1px #753200;
   border-radius: 3px;
-  color: #000000;
+  padding: 0 5px;
   font-size: 15px;
   font-weight: bold;
-  margin-right: 8px;
 }
-html body .innerPage .center .pointWrap .searchBox .left .btnBox button:hover, html body .innerPage .center .pointWrap .searchBox .left .btnBox button:active, html body .innerPage .center .pointWrap .searchBox .left .btnBox button.active {
-  background: #12683f;
-  border-color: #f3d3a4;
-  color: #ffffff;
+html body .innerPage .center .pointWrap .bottom .content .search .dateBox .btnBox button:hover, html body .innerPage .center .pointWrap .bottom .content .search .dateBox .btnBox button:active, html body .innerPage .center .pointWrap .bottom .content .search .dateBox .btnBox button.active {
+  background: linear-gradient(to bottom, #7b3806 0%, #b16d3d 99%);
+  color: #fff1c7;
 }
-html body .innerPage .center .pointWrap .searchBox .check {
-  width: 140px;
-  height: 36px;
+html body .innerPage .center .pointWrap .bottom .content .search .check {
+  width: 152px;
+  height: 42px;
   background: linear-gradient(to top, #1eb0a4 0%, #26dbcc 100%);
   border: solid 1px #39ebdd;
   color: #ffffff;
@@ -6906,52 +6959,53 @@ html body .innerPage .center .pointWrap .searchBox .check {
   align-items: center;
   justify-content: center;
 }
-html body .innerPage .center .pointWrap .searchBox .check:hover, html body .innerPage .center .pointWrap .searchBox .check:active, html body .innerPage .center .pointWrap .searchBox .check.active {
+html body .innerPage .center .pointWrap .bottom .content .search .check:hover, html body .innerPage .center .pointWrap .bottom .content .search .check:active, html body .innerPage .center .pointWrap .bottom .content .search .check.active {
   background: linear-gradient(to top, #1eb0a4 0%, #159288 100%);
 }
-html body .innerPage .center .pointWrap hr {
-  margin: 15px 0;
-}
-html body .innerPage .center .pointWrap table {
-  width: 92%;
+html body .innerPage .center .pointWrap .bottom .content .box {
+  width: 100%;
   height: auto;
-  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 30px 20px;
 }
-html body .innerPage .center .pointWrap table tr {
-  border-bottom: solid 1px #bf9755;
+html body .innerPage .center .pointWrap .bottom .content .box table {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #713100;
 }
-html body .innerPage .center .pointWrap table tr:nth-of-type(1) {
+html body .innerPage .center .pointWrap .bottom .content .box table tr:last-child td {
   border: none;
 }
-html body .innerPage .center .pointWrap table tr th {
+html body .innerPage .center .pointWrap .bottom .content .box table tr th, html body .innerPage .center .pointWrap .bottom .content .box table tr td {
   vertical-align: middle;
-  height: 40px;
+  height: 50px;
   border-bottom: solid 2px #713100;
+  background: #fff8e2;
 }
-html body .innerPage .center .pointWrap table tr th p {
-  font-size: 14px;
-  font-weight: bold;
-  color: #753200;
-  border-right: solid 1px #bf9755;
-}
-html body .innerPage .center .pointWrap table tr td {
-  width: 25%;
-  vertical-align: middle;
-  height: 40px;
-}
-html body .innerPage .center .pointWrap table tr td:last-child p {
+html body .innerPage .center .pointWrap .bottom .content .box table tr th:last-child p, html body .innerPage .center .pointWrap .bottom .content .box table tr td:last-child p {
   border: none;
 }
-html body .innerPage .center .pointWrap table tr td p {
-  font-size: 14px;
-  font-weight: bold;
-  color: #281600;
+html body .innerPage .center .pointWrap .bottom .content .box table tr th p, html body .innerPage .center .pointWrap .bottom .content .box table tr td p {
+  width: 100%;
   text-align: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #713100;
   border-right: solid 1px #bf9755;
+  box-sizing: border-box;
 }
-html body .innerPage .center .pointWrap table tr td p.open {
+html body .innerPage .center .pointWrap .bottom .content .box table tr td {
+  border-bottom: solid 1px #bf9755;
+  color: #281600;
+  width: 25%;
+  background: #feedc5;
+}
+html body .innerPage .center .pointWrap .bottom .content .box table tr td:nth-of-type(1) p {
+  color: #a75819;
   text-decoration: underline;
-  color: #2fd4b6;
   cursor: pointer;
 }
 html body .helpPage {

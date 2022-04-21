@@ -586,18 +586,24 @@
                 table {
                     width: 100%;
                     height: auto;
-                    box-shadow: 0 0 0 1px $mainBorder_2;
+                    box-shadow: 0 0 0 1px $tableList_Border;
+                    border-radius: 5px;
+                    overflow: hidden;
 
                     tr {
-                        border-bottom: solid 1px $mainBorder_2;
 
                         &:last-child {
-                            border: none;
+                            
+                            td {
+                                border: none;
+                            }
                         }
 
                         th {
                             vertical-align: middle;
                             height: 40px;
+                            background: $tableList_TitleBG;
+                            border-bottom: solid 2px $tableList_Border;
 
                             &:last-child {
 
@@ -609,7 +615,7 @@
                             p {
                                 font-size: 14px;
                                 font-weight: bold;
-                                color: $title_2;
+                                color: $tableList_Title;
                                 border-right: solid 1px $mainBorder_1;
                             }
                         }
@@ -618,6 +624,8 @@
                             width: 50%;
                             vertical-align: middle;
                             height: 40px;
+                            background: $tableList_ListBG;
+                            border-bottom: solid 1px $mainBorder_1;
 
                             &:last-child {
 

@@ -4177,124 +4177,151 @@
         //查詢紅利
         .pointWrap {
             width: 1140px;
-            height: auto;
-            background: $mainBG_1;
-            border: solid 1px $mainBorder_2;
-            box-sizing: border-box;
 
-            .title {
-                color: $title_1;
+            .top {
+                width: 100%;
+                height: 50px;
+                background: $smallBG;
+                color: $title_2;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                padding: 0 22px;
+                font-weight: bold;
                 font-size: 20px;
                 letter-spacing: 2px;
-                font-weight: bold;
-                margin-bottom: 15px;
-                padding: 20px 20px 0;
-                box-sizing: border-box;
+                border-radius: 5px;
+                border: solid 1px $mainBorder_2;
             }
 
-            .searchBox {
+            .bottom {
                 width: 100%;
                 height: auto;
-                display: flex;
-                margin-top: 30px;
-                justify-content: space-between;
-                box-sizing: border-box;
-                padding: 0 20px;
+                margin-top: 20px;
 
-                .left {
-                    display: flex;
+                .content {
+                    width: 100%;
+                    height: auto;
+                    background: $mainBG_2;
+                    border-radius: 5px;
+                    border: solid 1px $mainBorder_1;
 
-                    .inputBox {
-                        width: auto;
-                        height: auto;
+                    .search {
+                        width: 100%;
+                        height: 90px;
                         display: flex;
                         align-items: center;
-                        color: $title_2;
-                        font-size: 14px;
-                        font-weight: bold;
-                        margin-right: 15px;
-    
-                        input {
-                            width: 250px;
-                            height: 36px;
-                            @include mainInput;
-                            margin-left: 20px;
-                        }
-                    }
-    
-                    .btnBox {
-                        width: auto;
-                        height: auto;
-                        display: flex;
-    
-                        button {
-                            width: 70px;
-                            height: 36px;
-                            @include changeBtn;
-                            margin-right: 8px;
-                        }
-                    }
-                }
+                        justify-content: space-between;
+                        padding: 0 20px;
+                        border-bottom: solid 1px $mainBorder_1;
+                        box-sizing: border-box;
 
-                .check {
-                    width: 140px;
-                    height: 36px;
-                    @include mainBtn;
-                }
-            }
+                        .dateBox {
+                            width: auto;
+                            height: auto;
+                            display: flex;
+                            align-items: center;
 
-            hr {
-                margin: 15px 0;
-            }
+                            .title {
+                                width: 80px;
+                                height: auto;
+                                color: $title_2;
+                                font-size: 14px;
+                                margin-right: 25px;
+                                font-weight: bold;
+                                letter-spacing: 1px;
+                            }
 
-            table {
-                width: 92%;
-                height: auto;
-                margin: 0 auto;
+                            input {
+                                width: 258px;
+                                height: 42px;
+                                @include mainInput;
+                            }
 
-                tr {
-                    border-bottom: solid 1px $mainBorder_1;
-
-                    &:nth-of-type(1) {
-                        border: none;
-                    }
-
-                    th {
-                        vertical-align: middle;
-                        height: 40px;
-                        border-bottom: solid 2px $choose_Border;
-
-                        p {
-                            font-size: 14px;
-                            font-weight: bold;
-                            color: $title_2;
-                            border-right: solid 1px $mainBorder_1;
-                        }
-                    }
-
-                    td {
-                        width: 25%;
-                        vertical-align: middle;
-                        height: 40px;
-
-                        &:last-child {
-
-                            p {
-                                border: none;
+                            .btnBox {
+                                width: auto;
+                                height: auto;
+                                font-size: 0;
+                                margin-left: 15px;
+                                
+                                button {
+                                    width: auto;
+                                    height: 42px;
+                                    margin-right: 10px;
+                                    @include secondBtn;
+                                }
                             }
                         }
 
-                        p {
-                            font-size: 14px;
-                            font-weight: bold;
-                            color: $mainFont_1;
-                            text-align: center;
-                            border-right: solid 1px $mainBorder_1;
+                        .check {
+                            width: 152px;
+                            height: 42px;
+                            @include mainBtn;
+                        }
+                    }
 
-                            &.open {
-                                text-decoration: underline;
-                                color: $remind_sp;
-                                cursor: pointer;
+                    .box {
+                        width: 100%;
+                        height: auto;
+                        box-sizing: border-box;
+                        padding: 30px 20px;
+
+                        table {
+                            width: 100%;
+                            height: auto;
+                            overflow: hidden;
+                            border-radius: 5px;
+                            box-shadow: 0 0 0 1px $tableList_Border;
+
+                            tr {
+
+                                &:last-child {
+
+                                    td {
+                                        border: none;
+                                    }
+                                }
+
+                                th,td {
+                                    vertical-align: middle;
+                                    height: 50px;
+                                    border-bottom: solid 2px $tableList_Border;
+                                    background: $tableList_TitleBG;
+
+                                    &:last-child {
+
+                                        p {
+                                            border: none;
+                                        }
+                                    }
+
+                                    p {
+                                        width: 100%;
+                                        text-align: center;
+                                        font-size: 13px;
+                                        letter-spacing: 1px;
+                                        font-weight: bold;
+                                        color: $tableList_Title;
+                                        border-right: solid 1px $mainBorder_1;
+                                        box-sizing: border-box;
+                                    }
+                                }
+
+                                td {
+                                    border-bottom: solid 1px $mainBorder_1;
+                                    color: $mainFont_1;
+                                    width: 25%;
+                                    background: $tableList_ListBG;
+
+                                    &:nth-of-type(1) {
+                                        
+                                        p {
+                                            color: $tableList_betWord;
+                                            text-decoration: underline;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
