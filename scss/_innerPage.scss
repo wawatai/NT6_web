@@ -1787,7 +1787,7 @@
                     .delete {
                         width: auto;
                         height: auto;
-                        @include mainBtn;
+                        @include thirdBtn;
                         padding: 5px 8px;
                     }
                 }
@@ -1935,7 +1935,7 @@
                                     }
     
                                     &:nth-of-type(2) {
-                                        @include secondBtn;
+                                        @include thirdBtn;
                                     }
                                 }
                             }

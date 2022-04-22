@@ -31,21 +31,21 @@
 
             .title {
                 display: flex;
-                align-items: flex-end;
+                flex-direction: column;
+                align-items: center;
                 font-weight: bold;
                 background: $gameWrap_Linear;
                 -webkit-background-clip: text;
 
                 .big {
-                    font-size: 62px;
+                    font-size: 46px;
                     letter-spacing: 6px;
                     color: transparent;
+                    margin-bottom: 60px;
                 }
 
                 .small {
                     font-size: 42px;
-                    padding-bottom: 5px;
-                    margin-left: 16px;
                     color: transparent;
                 }
             }

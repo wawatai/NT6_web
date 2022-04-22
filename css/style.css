@@ -2128,20 +2128,20 @@ html body .gameWrap .content .textBox {
 }
 html body .gameWrap .content .textBox .title {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   font-weight: bold;
   background: #ffefd3;
   -webkit-background-clip: text;
 }
 html body .gameWrap .content .textBox .title .big {
-  font-size: 62px;
+  font-size: 46px;
   letter-spacing: 6px;
   color: transparent;
+  margin-bottom: 60px;
 }
 html body .gameWrap .content .textBox .title .small {
   font-size: 42px;
-  padding-bottom: 5px;
-  margin-left: 16px;
   color: transparent;
 }
 html body .gameWrap .content .textBox .mainCnt {
@@ -4324,21 +4324,15 @@ html body .innerPage .center .mailWrap.innerMode .msgTitle button:not(.delete).n
 html body .innerPage .center .mailWrap.innerMode .msgTitle .delete {
   width: auto;
   height: auto;
-  background: linear-gradient(to top, #1eb0a4 0%, #26dbcc 100%);
-  border: solid 1px #39ebdd;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  background: linear-gradient(to bottom, #fe3f70 23%, #cf0f57 100%);
+  border: solid 1px #ff5480;
   border-radius: 3px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 10px;
+  color: #fff7d8;
+  font-weight: bold;
   padding: 5px 8px;
 }
 html body .innerPage .center .mailWrap.innerMode .msgTitle .delete:hover, html body .innerPage .center .mailWrap.innerMode .msgTitle .delete:active, html body .innerPage .center .mailWrap.innerMode .msgTitle .delete.active {
-  background: linear-gradient(to top, #1eb0a4 0%, #159288 100%);
+  background: linear-gradient(to top, #df115e 0%, #820031 100%);
 }
 html body .innerPage .center .mailWrap.innerMode .date {
   width: 100%;
@@ -4513,17 +4507,14 @@ html body .innerPage .center .mailWrap .bottom .list .btnBox.edit span a:nth-of-
   color: #fff1c7;
 }
 html body .innerPage .center .mailWrap .bottom .list .btnBox.edit span a:nth-of-type(2) {
-  background: linear-gradient(to bottom, #fff1b0 6%, #dcc16e 52%, #fff1b0 100%);
-  color: #753200;
-  border: solid 1px #753200;
+  background: linear-gradient(to bottom, #fe3f70 23%, #cf0f57 100%);
+  border: solid 1px #ff5480;
   border-radius: 3px;
-  padding: 0 10px;
-  font-size: 15px;
+  color: #fff7d8;
   font-weight: bold;
 }
 html body .innerPage .center .mailWrap .bottom .list .btnBox.edit span a:nth-of-type(2):hover, html body .innerPage .center .mailWrap .bottom .list .btnBox.edit span a:nth-of-type(2):active, html body .innerPage .center .mailWrap .bottom .list .btnBox.edit span a:nth-of-type(2).active {
-  background: linear-gradient(to bottom, #7b3806 0%, #b16d3d 99%);
-  color: #fff1c7;
+  background: linear-gradient(to top, #df115e 0%, #820031 100%);
 }
 html body .innerPage .center .mailWrap .bottom .list .btnBox.edit a:last-child {
   background: linear-gradient(to top, #1eb0a4 0%, #26dbcc 100%);
