@@ -402,7 +402,22 @@
                 padding: 28px 47px;
 
                 .imgBox {
-                    overflow-x: auto;
+                    overflow-y: auto;
+
+                    &::-webkit-scrollbar {
+                        width: 5px;
+                        height: 10px;
+                    }
+            
+                    &::-webkit-scrollbar-thumb {
+                        background: $scrollBar_Thumb;
+                        border-radius: 10px;
+                    }
+            
+                    &::-webkit-scrollbar-track {
+                        background: $scrollBar_BG;
+                        border-radius: 10px
+                    }
                 }
 
                 p {

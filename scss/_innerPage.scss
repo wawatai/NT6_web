@@ -65,17 +65,17 @@
 
                     .quickSelect {
                         width: 100%;
-                        padding: 15px 0 10px;
+                        padding: 15px 10px 10px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        box-sizing: border-box;
 
                         li {
                             cursor: pointer;
-                            width: 27%;
+                            width: 34%;
                             padding: 10px 0 5px;
                             height: 85px;
-                            margin-right: 8px;
                             border-radius: 5px;
                             display: flex;
                             align-items: center;
@@ -505,6 +505,18 @@
                                             position: relative;
                                             margin-bottom: 20px;
 
+                                            &.web {
+                                                margin-bottom: 60px;
+
+                                                .copy {
+                                                    transform: translateY(0);
+                                                    left: 129px;
+                                                    right: unset;
+                                                    top: unset;
+                                                    bottom: -40px;
+                                                }
+                                            }
+
                                             p {
                                                 font-size: 14px;
                                                 color: $mainFont_1;
@@ -711,10 +723,6 @@
             display: none;
             width: 1140px;
             height: auto;
-            background: $mainBG_2;
-            border-radius: 5px;
-            overflow: hidden;
-            border: solid 1px $mainBorder_1;
 
             &.display {
                 display: block;
@@ -724,125 +732,134 @@
                 padding: 24px 0 30px;
             }
 
-            .vipHeader {
+            .top {
                 width: 100%;
                 height: auto;
-                padding-left: 40px;
-                display: flex;
-                box-sizing: border-box;
+                background: $mainBG_1;
+                border-radius: 5px;
+                border: solid 1px $mainBorder_1;
+                margin-bottom: 10px;
 
-                .medal {
-                    width: 80px;
-                    height: 116px;
-                    margin-right: 30px;
-                    flex-shrink: 0;
-                }
-
-                .rightBox {
+                .vipHeader {
                     width: 100%;
+                    height: auto;
+                    padding-left: 40px;
                     display: flex;
-                    align-items: flex-start;
-                    flex-direction: column;
-                    justify-content: center;
-
-                    .lv {
-                        margin: 6px 0 14px;
-                        font-size: 20px;
-                        font-weight: bold;
-                        letter-spacing: 2px;
-                        color: $title_2;
+                    box-sizing: border-box;
+    
+                    .medal {
+                        width: 80px;
+                        height: 116px;
+                        margin-right: 30px;
+                        flex-shrink: 0;
                     }
-
-                    .money {
-
-                        span {
-                            font-size: 14px;
-                            letter-spacing: 1px;
-                            color: $mainFont_1;
+    
+                    .rightBox {
+                        width: 100%;
+                        display: flex;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        justify-content: center;
+    
+                        .lv {
+                            margin: 6px 0 14px;
+                            font-size: 20px;
                             font-weight: bold;
-                            margin-right: 10px;
+                            letter-spacing: 2px;
+                            color: $title_1;
+                        }
+    
+                        .money {
+    
+                            span {
+                                font-size: 14px;
+                                letter-spacing: 1px;
+                                color: $mainFont_2;
+                                font-weight: bold;
+                                margin-right: 10px;
+                            }
                         }
                     }
                 }
-            }
-
-            .lvGraph {
-                width: 100%;
-                height: auto;
-                box-sizing: border-box;
-                padding: 20px 20px 0;
-
-                .text {
-                    display: flex;
-                    margin-bottom: 8px;
-                    position: relative;
+    
+                .lvGraph {
                     width: 100%;
                     height: auto;
-
-                    li {
-                        width: 20%;
-                        font-size: 14px;
-                        font-weight: bold;
-                        color: $mainFont_1;
-
-                        &:nth-of-type(2) {
-                            margin-left: -18px;
-                        }
-
-                        &:last-child {
-                            text-align: right;
-                            position: absolute;
-                            right: 0px;
-                            top: 0px;
-                        }
-                    }
-                }
-
-                .bar {
-                    width: 100%;
-                    height: 13px;
-                    @include levelBar;
-
-                    li {
-                        width: 8%;
-                    }
-                }
-            }
-
-            .nextBox {
-                width: 100%;
-                height: auto;
-                box-sizing: border-box;
-                padding: 22px 20px;
-
-                .nextWord {
-                    width: 100%;
-                    height: auto;
-                    letter-spacing: 2px;
-                    font-size: 16px;
-                    margin-bottom: 20px;
-                    color: $title_2;
-                    font-weight: bold;
-                }
-
-                .nextBar {
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    margin-bottom: 15px;
-                    font-size: 14px;
-                    letter-spacing: 1px;
-                    color: $mainFont_1;
-                    font-weight: bold;
-
-                    .bar {
-                        width: 400px;
-                        height: 8px;
-                        @include levelBar;
-                        margin: 0 10px;
-
+                    box-sizing: border-box;
+                    padding: 20px 20px 0;
+    
+                    .text {
+                        display: flex;
+                        margin-bottom: 8px;
+                        position: relative;
+                        width: 100%;
+                        height: auto;
+    
                         li {
                             width: 20%;
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: $mainFont_1;
+    
+                            &:nth-of-type(2) {
+                                margin-left: -18px;
+                            }
+    
+                            &:last-child {
+                                text-align: right;
+                                position: absolute;
+                                right: 0px;
+                                top: 0px;
+                            }
+                        }
+                    }
+    
+                    .bar {
+                        width: 100%;
+                        height: 13px;
+                        @include levelBar;
+    
+                        li {
+                            width: 8%;
+                        }
+                    }
+                }
+    
+                .nextBox {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    padding: 22px 20px;
+    
+                    .nextWord {
+                        width: 100%;
+                        height: auto;
+                        letter-spacing: 2px;
+                        font-size: 16px;
+                        margin-bottom: 20px;
+                        color: $title_2;
+                        font-weight: bold;
+                    }
+    
+                    .nextBar {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        margin-bottom: 15px;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        color: $mainFont_1;
+                        font-weight: bold;
+    
+                        .bar {
+                            width: 400px;
+                            height: 8px;
+                            @include levelBar;
+                            margin: 0 10px;
+    
+                            li {
+                                width: 20%;
+                            }
                         }
                     }
                 }
@@ -853,7 +870,10 @@
                 height: auto;
                 box-sizing: border-box;
                 padding: 18px 22px 6px;
-                border-top: solid 1px $mainBorder_1;
+                border-radius: 5px;
+                background: $mainBG_2;
+                border-radius: 5px;
+                border: solid 1px $mainBorder_2;
 
                 .title {
                     width: 100%;
@@ -2823,6 +2843,13 @@
                                 vertical-align: middle;
                                 background: $tableList_ListBG;
 
+                                &:last-child {
+
+                                    p {
+                                        border: none;
+                                    }
+                                }
+
                                 p {
                                     color: $mainFont_1;
                                     font-size: 14px;
@@ -2839,20 +2866,23 @@
                                     }
 
                                     button {
-                                        width: 60px;
-                                        height: 28px;
+                                        width: auto;
+                                        height: auto;
                                         @include mainBtn;
                                         font-size: 14px;
+                                        padding: 5px 10px;
 
                                         &.check {
                                             @include secondBtn;
+                                            font-size: 14px;
+                                            padding: 5px 10px;
                                         }
                                     }
 
                                     i {
                                         display: inline-block;
-                                        width: 15px;
-                                        height: 27px;
+                                        width: 9px;
+                                        height: 16px;
                                         transform: rotate(-90deg);
                                     }
                                 }
@@ -2867,23 +2897,23 @@
         .betWrap {
             width: 1140px;
             height: auto;
-            padding: 15px 0 28px;
-            background: $mainBG_2;
-            border: solid 1px $mainBorder_1;
-            border-radius: 5px;
 
             form {
                 width: 100%;
                 height: auto;
-                border-bottom: solid 1px $mainBorder_1;
+                border: solid 1px $mainBorder_1;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                background: $mainBG_1;
 
                 .title {
-                    padding-left: 23px;
+                    padding: 10px 0 15px 20px;
                     margin-bottom: 28px;
                     font-size: 20px;
                     letter-spacing: 2px;
-                    color: $title_2;
+                    color: $title_1;
                     font-weight: bold;
+                    border-bottom: solid 1px $mainBorder_2;
                 }
 
                 .inputGroup {
@@ -2905,7 +2935,7 @@
 
                         &.remind {
                             width: auto;
-                            color: $remind;
+                            color: $mainFont_2;
                             margin-top: 25px;
                         }
                     }
@@ -2982,6 +3012,17 @@
                 margin: 15px 0 30px;
                 padding: 0 21px;
                 box-sizing: border-box;
+                background: $mainBG_2;
+                border-radius: 5px;
+                border: solid 1px $mainBorder_2;
+
+                .smallTitle {
+                    font-size: 17px;
+                    letter-spacing: 2px;
+                    color: $title_2;
+                    font-weight: bold;
+                    padding-top: 15px;
+                }
 
                 ul {
                     width: 100%;
@@ -3248,7 +3289,24 @@
                         .box {
                             width: 95%;
                             height: auto;
-                            overflow: hidden;
+                            overflow-x: auto;
+                            margin-top: 10px;
+                            padding-bottom: 5px;
+                            
+                            &::-webkit-scrollbar {
+                                margin-top: 5px;
+                                height: 5px;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                background: $scrollBar_Thumb;
+                                border-radius: 5px;
+                            }
+
+                            &::-webkit-scrollbar-track {
+                                background: $scrollBar_BG;
+                                border-radius: 5px;
+                            }
 
                             ul {
                                 width: 100%;
@@ -3265,6 +3323,7 @@
                                     justify-content: center;
                                     box-sizing: border-box;
                                     cursor: pointer;
+                                    flex-shrink: 0;
 
                                     i {
                                         width: 27px;
@@ -3474,159 +3533,165 @@
                 width: 880px;
                 height: auto;
                 margin-right: 15px;
-                background: $mainBG_2;
-                border: solid 1px $mainBorder_2;
-                border-radius: 5px;
 
-                .title {
-                    width: 100%;
-                    height: 50px;
-                    box-sizing: border-box;
-                    padding: 0 22px;
-                    display: flex;
-                    align-items: center;
-                    border-bottom: solid 1px $mainBorder_1;
-
-                    div {
-                        color: $title_2;
-                        font-size: 20px;
-                        letter-spacing: 2px;
-                        font-weight: bold;
-                    }
-                }
-
-                .wallet {
-                    width: 100%;
-                    height: 130px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    border-bottom: solid 1px $mainBorder_1;
-
-                    .centerWallet {
-                        width: 49%;
-                        height: 100%;
-                        padding: 18px 25px 0;
-                        box-sizing: border-box;
-
-                        .walletTitle {
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-
-                            p {
-                                display: flex;
-                                align-items: center;
-                                font-size: 17px;
-                                letter-spacing: 2px;
-                                color: $title_2;
-                                font-weight: bold;
-
-                                .reset_ic {
-                                    display: block;
-                                    width: 16px;
-                                    height: 16px;
-                                    margin-left: 6px;
-                                }
-                            }
-
-                            button {
-                                width: auto;
-                                height: 23px;
-                                @include secondBtn;
-                                font-size: 12px;
-                            }
-                        }
-
-                        .amount {
-                            width: 100%;
-                            height: auto;
-                            box-sizing: border-box;
-                            padding: 13px 0 0 10px;
-                            font-size: 43px;
-                            font-weight: bold;
-                            color: $money;
-                        }
-                    }
-                }
-
-                .platform {
+                .top {
                     width: 100%;
                     height: auto;
-                    box-sizing: border-box;
-                    padding: 21px 23px 0;
-                    border-bottom: solid 1px $mainBorder_1;
-                    
-                    .platformTitle {
-                        font-size: 17px;
-                        font-weight: bold;
-                        letter-spacing: 2px;
-                        margin-bottom: 20px;
-                        color: $title_2;
-                    }
+                    background: $mainBG_1;
+                    border: solid 1px $mainBorder_1;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
 
-                    ul {
+                    .title {
                         width: 100%;
-                        height: 97px;
-                        display: flex;
-                        flex-wrap: wrap;
-                        overflow: hidden;
-
-                        &.active {
-                            height: auto;
-                        }
-
-                        li {
-                           width: 196px;
-                           height: 97px;
-                           box-sizing: border-box;
-                           padding: 18px;
-                           margin: 0 16px 16px 0;
-                           border: solid 1px $mainBorder_1;
-                           border-radius: 5px;
-                           background: $smallMoneyBox_BG;
-
-                           &:nth-of-type(4n) {
-                               margin-right: 0;
-                           }
-
-                           .name {
-                               margin-bottom: 5px;
-                               font-size: 16px;
-                               color: $title_2;
-                               font-weight: bold;
-                            }
-
-                            .amount {
-                                font-size: 25px;
-                                font-weight: bold;
-                                color: $money;
-                                margin-top: 8px;
-                            }
-                        }
-                    }
-
-                    .open {
-                        width: 100%;
-                        height: auto;
-                        padding: 23px 0 35px;
-                        text-align: center;
+                        height: 50px;
+                        box-sizing: border-box;
+                        padding: 0 22px;
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-
-                        button {
-                            color: $mainFont_1;
-                            background: none;
+                        border-bottom: solid 1px $mainBorder_2;
+    
+                        div {
+                            color: $title_1;
+                            font-size: 20px;
+                            letter-spacing: 2px;
+                            font-weight: bold;
+                        }
+                    }
+    
+                    .wallet {
+                        width: 100%;
+                        height: 130px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-bottom: solid 1px $mainBorder_2;
+    
+                        .centerWallet {
+                            width: 49%;
+                            height: 100%;
+                            padding: 18px 25px 0;
+                            box-sizing: border-box;
+    
+                            .walletTitle {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+    
+                                p {
+                                    display: flex;
+                                    align-items: center;
+                                    font-size: 17px;
+                                    letter-spacing: 2px;
+                                    color: $mainFont_2;
+                                    font-weight: bold;
+    
+                                    .reset_ic {
+                                        display: block;
+                                        width: 16px;
+                                        height: 16px;
+                                        margin-left: 6px;
+                                        filter: grayscale(1) brightness(10);
+                                    }
+                                }
+    
+                                button {
+                                    width: auto;
+                                    height: auto;
+                                    @include secondBtn;
+                                    padding: 3px 5px;
+                                }
+                            }
+    
+                            .amount {
+                                width: 100%;
+                                height: auto;
+                                box-sizing: border-box;
+                                padding: 13px 0 0 10px;
+                                font-size: 43px;
+                                font-weight: bold;
+                                color: $money;
+                            }
+                        }
+                    }
+    
+                    .platform {
+                        width: 100%;
+                        height: auto;
+                        box-sizing: border-box;
+                        padding: 21px 23px 0;
+                        
+                        .platformTitle {
+                            font-size: 17px;
+                            font-weight: bold;
+                            letter-spacing: 2px;
+                            margin-bottom: 20px;
+                            color: $mainFont_2;
+                        }
+    
+                        ul {
+                            width: 100%;
+                            height: 97px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            overflow: hidden;
+    
+                            &.active {
+                                height: auto;
+                            }
+    
+                            li {
+                               width: 196px;
+                               height: 97px;
+                               box-sizing: border-box;
+                               padding: 18px;
+                               margin: 0 16px 16px 0;
+                               border: solid 1px $mainBorder_1;
+                               border-radius: 5px;
+                               background: $smallMoneyBox_BG;
+    
+                               &:nth-of-type(4n) {
+                                   margin-right: 0;
+                               }
+    
+                               .name {
+                                   margin-bottom: 5px;
+                                   font-size: 16px;
+                                   color: $title_2;
+                                   font-weight: bold;
+                                }
+    
+                                .amount {
+                                    font-size: 25px;
+                                    font-weight: bold;
+                                    color: $money;
+                                    margin-top: 8px;
+                                }
+                            }
+                        }
+    
+                        .open {
+                            width: 100%;
+                            height: auto;
+                            padding: 23px 0 35px;
+                            text-align: center;
                             display: flex;
                             align-items: center;
-                            font-size: 13px;
-
-                            i {
-                                display: block;
-                                width: 14px;
-                                height: 14px;
-                                margin-left: 10px;
+                            justify-content: center;
+    
+                            button {
+                                color: $mainFont_1;
+                                background: none;
+                                display: flex;
+                                align-items: center;
+                                font-size: 13px;
+    
+                                i {
+                                    display: block;
+                                    width: 14px;
+                                    height: 14px;
+                                    margin-left: 10px;
+                                }
                             }
                         }
                     }
@@ -3637,6 +3702,9 @@
                     height: auto;
                     box-sizing: border-box;
                     padding: 25px 0 36px 27px;
+                    border-radius: 5px;
+                    background: $mainBG_2;
+                    border: solid 1px $mainBorder_2;
 
                     .formTitle {
                         display: flex;
@@ -3828,9 +3896,8 @@
 
                                     button {
                                         width: auto;
-                                        height: 23px;
-                                        @include mainBtn;
-                                        font-size: 12px;
+                                        height: auto;
+                                        @include secondBtn;
                                         margin-top: 5px;
                                         padding: 3px 5px;
                                     }
@@ -3962,7 +4029,7 @@
                             margin: 0 1% 1% 0;
                             border: solid 1px $mainBorder_1;
                             border-radius: 5px;
-                            background: $smallMoneyBox_BG;
+                            background: $mainBG_2;  
                             box-sizing: border-box;
                             padding: 10px 0;
 
@@ -3976,15 +4043,18 @@
 
                                 span {
                                     font-size: 38px;
-                                    color: $money;
+                                    color: $mainFont_1;
                                     font-weight: bold;
                                 }
                             }
 
                             .notice {
-                                font-size: 15px;
-                                letter-spacing: 2px;
+                                font-size: 12px;
+                                letter-spacing: 1px;
+                                font-weight: bold;
                                 color: $title_2;
+                                width: 90%;
+                                text-align: center;
                             }
                         }
                     }
@@ -4074,102 +4144,116 @@
         .inviteWrap {
             width: 1140px;
             height: auto;
-            background: $mainBG_1;
-            border: solid 1px $mainBorder_2;
-            box-sizing: border-box;
-            padding: 20px;
 
             .title {
-                color: $title_1;
+                width: 100%;
+                height: 50px;
+                background: $smallBG;
+                color: $title_2;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                padding: 0 22px;
+                font-weight: bold;
                 font-size: 20px;
                 letter-spacing: 2px;
-                font-weight: bold;
-                margin-bottom: 15px;
+                border-radius: 5px;
+                border: solid 1px $mainBorder_2;
+                margin-bottom: 20px;
             }
 
-            .box {
+            .bottom {
                 width: 100%;
                 height: auto;
-                display: flex;
-                justify-content: space-between;
+                background: $mainBG_2;
+                border-radius: 5px;
+                border: solid 1px $mainBorder_2;
+                padding: 15px 20px;
+                box-sizing: border-box;
 
-                .left {
-                    width: auto;
+                .box {
+                    width: 100%;
                     height: auto;
-
-                    .row {
+                    display: flex;
+                    justify-content: space-between;
+    
+                    .left {
+                        width: auto;
+                        height: auto;
+    
+                        .row {
+                            display: flex;
+                            align-items: center;
+                            height: 50px;
+                            
+                            p {
+                                font-size: 14px;
+                                font-weight: bold;
+    
+                                &:nth-of-type(1) {
+                                    width: 80px;
+                                    color: $title_2;
+                                }
+    
+                                &:nth-of-type(2) {
+                                    width: 190px;
+                                    color: $mainFont_1;
+    
+                                    input {
+                                        width: 100%;
+                                        height: 36px;
+                                        @include mainInput;
+                                    }
+                                }
+                            }
+    
+                            button {
+                                width: auto;
+                                height: 36px;
+                                @include secondBtn;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+    
+                    .right {
                         display: flex;
                         align-items: center;
-                        height: 50px;
-                        
+                        width: 300px;
+                        justify-content: space-between;
+                        margin-right: 200px;
+    
                         p {
                             font-size: 14px;
                             font-weight: bold;
-
-                            &:nth-of-type(1) {
-                                width: 80px;
-                                color: $title_2;
-                            }
-
-                            &:nth-of-type(2) {
-                                width: 190px;
-                                color: $mainFont_1;
-
-                                input {
-                                    width: 100%;
-                                    height: 36px;
-                                    @include mainInput;
-                                }
-                            }
+                            color: $title_2;
+                            line-height: 18px;
                         }
-
-                        button {
-                            width: auto;
-                            height: 36px;
-                            @include borderBtn;
-                            padding: 0 5px;
-                            margin-left: 10px;
+    
+                        div {
+                            width: 100px;
+                            height: 100px;
                         }
                     }
                 }
-
-                .right {
-                    display: flex;
-                    align-items: center;
-                    width: 300px;
-                    justify-content: space-between;
-                    margin-right: 200px;
-
+    
+                .mainImg {
+                    width: 100%;
+                    height: 505px;
+                    margin: 20px 0;
+                }
+    
+                .wordBox {
+                    width: auto;
+                    height: auto;
+    
                     p {
-                        font-size: 14px;
+                        font-size: 16px;
                         font-weight: bold;
-                        color: $title_2;
-                        line-height: 18px;
+                        color: $mainFont_1;
+                        margin-bottom: 16px;
+                        line-height: 20px;
                     }
-
-                    div {
-                        width: 100px;
-                        height: 100px;
-                    }
-                }
-            }
-
-            .mainImg {
-                width: 100%;
-                height: 505px;
-                margin: 20px 0;
-            }
-
-            .wordBox {
-                width: auto;
-                height: auto;
-
-                p {
-                    font-size: 16px;
-                    font-weight: bold;
-                    color: $mainFont_1;
-                    margin-bottom: 16px;
-                    line-height: 20px;
                 }
             }
         }

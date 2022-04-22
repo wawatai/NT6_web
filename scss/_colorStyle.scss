@@ -23,7 +23,7 @@ $remind_sp: #2fd4b6;
 $mainShadow_1: #0000004a;
 
 //內頁左側hover
-$innerSide_HoverBG1: #b36c40;
+$innerSide_HoverBG1: #6b2f00;
 $innerSide_HoverBG2: linear-gradient(to right,#af5d1c 0%,#6b2f00 100%);
 
 //最新消息選擇色
@@ -48,6 +48,10 @@ $filter_2: #ffeed4ad;
 //彈窗標頭色
 $jumpWindow_Header: linear-gradient(to right,#af5d1c 0%,#6b2f00 100%);
 $jumpWindow_Title: #ffffff;
+
+//滑軸顏色
+$scrollBar_BG: #cccccc;
+$scrollBar_Thumb: linear-gradient(to right,#af5d1c 0%,#6b2f00 100%);
 
 //帳號低中高強度
 $low: #ff0000;
@@ -479,24 +483,10 @@ $betRecord_innerBG: #fbe2b7;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    padding: 0 10px;
 
     &:hover,&:active,&.active {
         background: linear-gradient(to top,#1eb0a4 0%,#159288 100%);
-    }
-}
-//邊框線按鈕
-@mixin borderBtn {
-    background: transparent;
-    border: solid 1px #299150;
-    color: #3dbf6e;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 3px;
-
-    &:hover,&:active,&.active {
-        background: #2ca459;
-        color: #ffffff;
-        border-color: #c0f4d4;
     }
 }
 //slot頁按鈕
@@ -524,21 +514,6 @@ $betRecord_innerBG: #fbe2b7;
 
     &:hover,&:active,&.active {
         background: #0e1c5e;
-    }
-}
-//灰漸層+不同hover效果按鈕
-@mixin changeBtn {
-    background: linear-gradient(to top,#efbd82 0%,#f8deb8 100%);
-    border: solid 1px #e8e8e8;
-    border-radius: 3px;
-    color: #000000;
-    font-size: 15px;
-    font-weight: bold;
-
-    &:hover,&:active,&.active {
-        background: #12683f;
-        border-color: #f3d3a4;
-        color: #ffffff;
     }
 }
 //大灰頁籤按鈕
@@ -571,7 +546,7 @@ $betRecord_innerBG: #fbe2b7;
     color: #753200;
     border: solid 1px #753200;
     border-radius: 3px;
-    padding: 0 5px;
+    padding: 0 10px;
     font-size: 15px;
     font-weight: bold;
 

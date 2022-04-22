@@ -214,37 +214,6 @@
                     color: $link;
                     text-decoration: none;
                 }
-
-                .img {
-                    display: block;
-
-                    &.online01 {
-                        width: 860px;
-                        height: 736px;
-                    }
-
-                    &.online02 {
-                        width: 862px;
-                        height: 749px;
-                        margin-bottom: 20px;
-                    }
-
-                    &.online03 {
-                        width: 862px;
-                        height: 957px;
-                    }
-
-                    &.online04 {
-                        width: 187px;
-                        height: 144px;
-                    }
-
-                    &.online05 {
-                        width: 275px;
-                        height: 379px;
-                        margin: 10px 0 20px 55px;
-                    }
-                }
             }
         }
     }

@@ -21,32 +21,32 @@ $(function() {
     $('.sportBtn').mouseenter(function(){
         $('.topGameList,.topGameList .sport').addClass('display');
         $('.topGameList .sport').siblings().removeClass('display');
-        $('.topGameList .prev,.topGameList .next').removeClass('display');
+        // $('.topGameList .prev,.topGameList .next').removeClass('display');
     })
     $('.liveBtn').mouseenter(function(){
         $('.topGameList,.topGameList .live').addClass('display');
         $('.topGameList .live').siblings().removeClass('display');
-        $('.topGameList .prev,.topGameList .next').removeClass('display');
+        // $('.topGameList .prev,.topGameList .next').removeClass('display');
     })
     $('.slotBtn').mouseenter(function(){
         $('.topGameList,.topGameList .slot').addClass('display');
         $('.topGameList .slot').siblings().removeClass('display');
-        $('.topGameList .prev,.topGameList .next').addClass('display');
+        // $('.topGameList .prev,.topGameList .next').removeClass('display');
     })
     $('.lotteryBtn').mouseenter(function(){
         $('.topGameList,.topGameList .lottery').addClass('display');
         $('.topGameList .lottery').siblings().removeClass('display');
-        $('.topGameList .prev,.topGameList .next').removeClass('display');
+        // $('.topGameList .prev,.topGameList .next').removeClass('display');
     })
     $('.fishBtn').mouseenter(function(){
         $('.topGameList,.topGameList .fish').addClass('display');
         $('.topGameList .fish').siblings().removeClass('display');
-        $('.topGameList .prev,.topGameList .next').removeClass('display');
+        // $('.topGameList .prev,.topGameList .next').removeClass('display');
     })
     $('.boardBtn').mouseenter(function(){
         $('.topGameList,.topGameList .board').addClass('display');
         $('.topGameList .board').siblings().removeClass('display');
-        $('.topGameList .prev,.topGameList .next').removeClass('display');
+        // $('.topGameList .prev,.topGameList .next').removeClass('display');
     })
 })
 
@@ -63,33 +63,33 @@ $(document).on('ready', function() {
 })
 
 //slot下拉選單寬度+點擊滑動
-$(function(){
-    var slot = $('.listWrap .slot li');
-    var slotl = slot.length;
-    var slwp = $('.topGameList .slot');
-    $(slwp).css("width",""+220 * slotl+"");
+// $(function(){
+//     var slot = $('.listWrap .slot li');
+//     var slotl = slot.length;
+//     var slwp = $('.topGameList .slot');
+//     $(slwp).css("width",""+220 * slotl+"");
 
-    var n = 0;
-    var nt = $('.listWrap .next');
-    var pv = $('.listWrap .prev');
-    $(nt).click(function(){
-        n ++;
-        $(slwp).css("transform","translateX("+(-220 * n)+"px)");
+//     var n = 0;
+//     var nt = $('.listWrap .next');
+//     var pv = $('.listWrap .prev');
+//     $(nt).click(function(){
+//         n ++;
+//         $(slwp).css("transform","translateX("+(-220 * n)+"px)");
 
-        if(n == 1){
-            n --;
-        }
-    })
-    $(pv).click(function(){
-        n --;
-        $(slwp).css("transform","translateX("+(-220 * n)+"px)");
+//         if(n == 1){
+//             n --;
+//         }
+//     })
+//     $(pv).click(function(){
+//         n --;
+//         $(slwp).css("transform","translateX("+(-220 * n)+"px)");
 
-        if(n == -1){
-            $(slwp).css("transform","translateX(0px)");
-            n ++;
-        }
-    })
-})
+//         if(n == -1){
+//             $(slwp).css("transform","translateX(0px)");
+//             n ++;
+//         }
+//     })
+// })
 
 //.vipWrap .detailCardBox內選單滑動
 $(function(){
