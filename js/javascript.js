@@ -243,29 +243,29 @@ function openBoardGame(){
 //gameWrap小遊戲格hover切換左大圖
 // $(function(){
 //     $(".livePage .btnBox li:eq(0)").hover(function(){
-//         $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_1.png")
+//         $(".livePage .mainImg").attr("src","../images/partner/live/liveBG_1.png")
 //     })
 //     $(".livePage .btnBox li:eq(1)").hover(function(){
-//         $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_2.png")
+//         $(".livePage .mainImg").attr("src","../images/partner/live/liveBG_2.png")
 //     })
 //     $(".livePage .btnBox li:eq(2)").hover(function(){
-//         $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_3.png")
+//         $(".livePage .mainImg").attr("src","../images/partner/live/liveBG_3.png")
 //     })
 //     $(".livePage .btnBox li:eq(3)").hover(function(){
-//         $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_4.png")
+//         $(".livePage .mainImg").attr("src","../images/partner/live/liveBG_4.png")
 //     })
 //     $(".livePage .btnBox li:eq(4)").hover(function(){
-//         $(".livePage .mainImg").attr("src","../images/廠商圖/live/liveBG_5.png")
+//         $(".livePage .mainImg").attr("src","../images/partner/live/liveBG_5.png")
 //     })
 
 //     $(".lotteryPage .btnBox li:eq(0)").hover(function(){
-//         $(".lotteryPage .mainImg").attr("src","../images/廠商圖/lottery/lotteryBG_1.png")
+//         $(".lotteryPage .mainImg").attr("src","../images/partner/lottery/lotteryBG_1.png")
 //     })
 //     $(".lotteryPage .btnBox li:eq(1)").hover(function(){
-//         $(".lotteryPage .mainImg").attr("src","../images/廠商圖/lottery/lotteryBG_2.png")
+//         $(".lotteryPage .mainImg").attr("src","../images/partner/lottery/lotteryBG_2.png")
 //     })
 //     $(".lotteryPage .btnBox li:eq(2)").hover(function(){
-//         $(".lotteryPage .mainImg").attr("src","../images/廠商圖/lottery/lotteryBG_3.png")
+//         $(".lotteryPage .mainImg").attr("src","../images/partner/lottery/lotteryBG_3.png")
 //     })
 // })
 
