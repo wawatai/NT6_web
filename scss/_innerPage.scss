@@ -510,8 +510,7 @@
 
                                                 .copy {
                                                     transform: translateY(0);
-                                                    left: 129px;
-                                                    right: unset;
+                                                    right: 0;
                                                     top: unset;
                                                     bottom: -40px;
                                                 }
@@ -942,7 +941,7 @@
                 font-size: 17px;
                 font-weight: bold;
                 letter-spacing: 2px;
-                color: $mainFont_1;
+                color: $title_2;
 
                 .back {
                     display: block;
@@ -3422,6 +3421,7 @@
                                     bottom: -16px;
                                     left: 175px;
                                     font-size: 12px;
+                                    font-weight: bold;
                                     letter-spacing: 1px;
                                     color: $remind;
                                 }
@@ -4102,6 +4102,7 @@
                                     font-size: 12px;
                                     letter-spacing: 1px;
                                     color: $remind;
+                                    font-weight: bold;
                                 }
                             }
                         }

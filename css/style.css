@@ -283,7 +283,7 @@ header .transferInfo .money i {
 }
 
 .dealWrap .waterBox .arrow_ic {
-  background: url("../images/icon/svg/arrow_r.svg") no-repeat;
+  background: url("../images/icon/svg/arrow_g.svg") no-repeat;
   background-size: 100%;
 }
 
@@ -1583,7 +1583,7 @@ html body .filter .jumpWindow.phoneWindow form .content {
 html body .filter .jumpWindow.phoneWindow form .content li {
   width: 100%;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 42px;
   font-size: 14px;
   font-weight: bold;
   color: #281600;
@@ -1605,9 +1605,8 @@ html body .filter .jumpWindow.phoneWindow form .content li button {
   font-weight: bold;
   padding: 0 5px;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 6px;
+  top: 48px;
+  right: 0;
 }
 html body .filter .jumpWindow.phoneWindow form .content li button:hover, html body .filter .jumpWindow.phoneWindow form .content li button:active, html body .filter .jumpWindow.phoneWindow form .content li button.active {
   background: linear-gradient(to bottom, #7b3806 0%, #b16d3d 99%);
@@ -2457,6 +2456,12 @@ html body .eventWrap .eventBody .side ul li {
   position: relative;
   cursor: pointer;
 }
+html body .eventWrap .eventBody .side ul li:nth-of-type(2) span, html body .eventWrap .eventBody .side ul li:nth-of-type(4) span {
+  font-size: 16px;
+}
+html body .eventWrap .eventBody .side ul li:nth-of-type(3) span {
+  font-size: 14px;
+}
 html body .eventWrap .eventBody .side ul li:hover, html body .eventWrap .eventBody .side ul li:active, html body .eventWrap .eventBody .side ul li.active {
   background: #fbe2b7;
 }
@@ -2476,6 +2481,7 @@ html body .eventWrap .eventBody .side ul li i {
   margin: 0 28px;
   overflow: hidden;
   position: relative;
+  flex-shrink: 0;
 }
 html body .eventWrap .eventBody .side ul li i::before {
   display: none;
@@ -3087,8 +3093,7 @@ html body .innerPage .center .memberWrap .bottom .dataWrap .content .fakeTable l
 }
 html body .innerPage .center .memberWrap .bottom .dataWrap .content .fakeTable li.right ul li.web .copy {
   transform: translateY(0);
-  left: 129px;
-  right: unset;
+  right: 0;
   top: unset;
   bottom: -40px;
 }
@@ -3503,7 +3508,7 @@ html body .innerPage .center .vipWrap .detailTitle {
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 2px;
-  color: #281600;
+  color: #753200;
 }
 html body .innerPage .center .vipWrap .detailTitle .back {
   display: block;
@@ -6060,6 +6065,7 @@ html body .innerPage .center .depositWrap .depositMiddle .bottom .content form .
   bottom: -16px;
   left: 175px;
   font-size: 12px;
+  font-weight: bold;
   letter-spacing: 1px;
   color: #f30f0f;
 }
@@ -6780,6 +6786,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row
   font-size: 12px;
   letter-spacing: 1px;
   color: #f30f0f;
+  font-weight: bold;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form button {
   width: 257px;

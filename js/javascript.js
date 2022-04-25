@@ -175,7 +175,7 @@ $(function(){
         $('.filter,.listWindow').addClass('display');
     })
 
-    $('.eventBox .check').click(function(){
+    $('.eventBox .check,.eventBoxAl .check').click(function(){
         $('.jumpWindow').removeClass('display');
         $('.filter,.checkEvent').addClass('display');
     })
@@ -692,5 +692,14 @@ $(function(){
         $(".eventWrap .tableWrap .noData")
         .addClass("display")
         .siblings().removeClass("display");
+    })
+})
+
+//優惠頁左列切換
+$(function(){
+    $(".eventWrap .side li").click(function(){
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active");
     })
 })
