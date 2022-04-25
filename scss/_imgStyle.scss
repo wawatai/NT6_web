@@ -342,15 +342,18 @@ header .transferInfo .money i {
     background: url('../images/icon/svg/arrow_r.svg') no-repeat;
     background-size: 100%;
 }
-.helpPage .nav .bulb {
+.helpPage .nav .bulb,
+.helpPage .nav .bulb::before {
     background: url('../images/icon/svg/bulb.svg') no-repeat;
     background-size: 100%;
 }
-.helpPage .nav .aboutUs {
+.helpPage .nav .aboutUs,
+.helpPage .nav .aboutUs::before {
     background: url('../images/icon/svg/aboutus.svg') no-repeat;
     background-size: 100%;
 }
-.helpPage .nav .downloadIC{
+.helpPage .nav .downloadIC,
+.helpPage .nav .downloadIC::before{
     background: url('../images/icon/svg/helpDownload.svg') no-repeat;
     background-size: 100%;
 }

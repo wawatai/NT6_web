@@ -3071,6 +3071,8 @@
                         height: 40px;
                         border-bottom: solid 1px $mainBorder_1;
                         background: $betRecord_innerBG;
+                        padding: 1px;
+                        box-sizing: border-box;
 
                         &:last-child {
                             border: none;

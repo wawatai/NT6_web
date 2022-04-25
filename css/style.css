@@ -373,17 +373,20 @@ header .transferInfo .money i {
   background-size: 100%;
 }
 
-.helpPage .nav .bulb {
+.helpPage .nav .bulb,
+.helpPage .nav .bulb::before {
   background: url("../images/icon/svg/bulb.svg") no-repeat;
   background-size: 100%;
 }
 
-.helpPage .nav .aboutUs {
+.helpPage .nav .aboutUs,
+.helpPage .nav .aboutUs::before {
   background: url("../images/icon/svg/aboutus.svg") no-repeat;
   background-size: 100%;
 }
 
-.helpPage .nav .downloadIC {
+.helpPage .nav .downloadIC,
+.helpPage .nav .downloadIC::before {
   background: url("../images/icon/svg/helpDownload.svg") no-repeat;
   background-size: 100%;
 }
@@ -2438,7 +2441,7 @@ html body .eventWrap .eventBody .side {
   width: 357px;
   margin-right: 13px;
   height: auto;
-  background: linear-gradient(to bottom, #af5d1c 0%, #e4a867ad 100%);
+  background: linear-gradient(to bottom, #f9f2de 0%, #e7d2ac 100%);
   border: solid 1px #fff8e2;
   border-radius: 5px;
   overflow: hidden;
@@ -2452,7 +2455,7 @@ html body .eventWrap .eventBody .side ul li {
   height: 60px;
   display: flex;
   align-items: center;
-  border-bottom: solid 1px #fff8e2;
+  border-bottom: solid 1px #bf9755;
   position: relative;
   cursor: pointer;
 }
@@ -2463,10 +2466,10 @@ html body .eventWrap .eventBody .side ul li:nth-of-type(3) span {
   font-size: 14px;
 }
 html body .eventWrap .eventBody .side ul li:hover, html body .eventWrap .eventBody .side ul li:active, html body .eventWrap .eventBody .side ul li.active {
-  background: #fbe2b7;
+  background: linear-gradient(to right, #af5d1c 0%, #6b2f00 100%);
 }
 html body .eventWrap .eventBody .side ul li:hover span, html body .eventWrap .eventBody .side ul li:active span, html body .eventWrap .eventBody .side ul li.active span {
-  color: #672e01;
+  color: #fff7d8;
 }
 html body .eventWrap .eventBody .side ul li:hover i, html body .eventWrap .eventBody .side ul li:active i, html body .eventWrap .eventBody .side ul li.active i {
   background: none;
@@ -2491,12 +2494,12 @@ html body .eventWrap .eventBody .side ul li i::before {
   height: 100%;
   left: -23px;
   top: 0;
-  filter: drop-shadow(23px 0px 0px #672e01);
+  filter: drop-shadow(23px 0px 0px #fff7d8);
 }
 html body .eventWrap .eventBody .side ul li span {
   font-weight: bold;
   font-size: 22px;
-  color: #fff7d8;
+  color: #753200;
 }
 html body .eventWrap .eventBody .eventList {
   display: none;
@@ -5734,6 +5737,8 @@ html body .innerPage .center .betWrap .fakeTable ul li {
   height: 40px;
   border-bottom: solid 1px #bf9755;
   background: #fbe2b7;
+  padding: 1px;
+  box-sizing: border-box;
 }
 html body .innerPage .center .betWrap .fakeTable ul li:last-child {
   border: none;
@@ -7138,7 +7143,7 @@ html body .helpPage .center {
   justify-content: space-between;
 }
 html body .helpPage .center .nav {
-  background: linear-gradient(to bottom, #af5d1c 0%, #e4a867ad 100%);
+  background: linear-gradient(to bottom, #f9f2de 0%, #e7d2ac 100%);
   width: 390px;
   height: auto;
   border: solid 1px #fff8e2;
@@ -7147,6 +7152,16 @@ html body .helpPage .center .nav {
 html body .helpPage .center .nav li {
   width: 100%;
   height: auto;
+  overflow: hidden;
+}
+html body .helpPage .center .nav li:nth-of-type(1).title {
+  border-radius: 5px 5px 0 0;
+}
+html body .helpPage .center .nav li:nth-last-of-type(2).title {
+  border-radius: 0 0 5px 5px;
+}
+html body .helpPage .center .nav li:nth-last-of-type(2).title.active {
+  border-radius: 0;
 }
 html body .helpPage .center .nav li:nth-last-of-type(2).title {
   border: none;
@@ -7159,15 +7174,25 @@ html body .helpPage .center .nav li.title {
   height: 60px;
   box-sizing: border-box;
   cursor: pointer;
-  border-bottom: solid 1px #fff8e2;
+  border-bottom: solid 1px #bf9755;
+}
+html body .helpPage .center .nav li.title:hover, html body .helpPage .center .nav li.title:active, html body .helpPage .center .nav li.title.active {
+  background: linear-gradient(to right, #af5d1c 0%, #6b2f00 100%);
 }
 html body .helpPage .center .nav li.title:hover .arrow_ic, html body .helpPage .center .nav li.title:active .arrow_ic, html body .helpPage .center .nav li.title.active .arrow_ic {
   transform: rotate(270deg);
+  filter: grayscale(1) brightness(30);
+}
+html body .helpPage .center .nav li.title:hover p, html body .helpPage .center .nav li.title:active p, html body .helpPage .center .nav li.title.active p {
+  color: #fff7d8;
+}
+html body .helpPage .center .nav li.title:hover i::before, html body .helpPage .center .nav li.title:active i::before, html body .helpPage .center .nav li.title.active i::before {
+  display: none;
 }
 html body .helpPage .center .nav li.title p {
   display: flex;
   align-items: center;
-  color: #fff7d8;
+  color: #753200;
   font-size: 22px;
   font-weight: bold;
 }
@@ -7176,12 +7201,31 @@ html body .helpPage .center .nav li.title p i {
   width: 20px;
   height: 24px;
   margin-right: 23px;
+  position: relative;
+  overflow: hidden;
+}
+html body .helpPage .center .nav li.title p i::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 24px;
+  filter: drop-shadow(0px -24px 0px #753200);
 }
 html body .helpPage .center .nav li.title p i.aboutUs {
   height: 28px;
 }
+html body .helpPage .center .nav li.title p i.aboutUs::before {
+  top: 28px;
+  filter: drop-shadow(0px -28px 0px #753200);
+}
 html body .helpPage .center .nav li.title p i.downloadIC {
   height: 21px;
+}
+html body .helpPage .center .nav li.title p i.downloadIC::before {
+  top: 21px;
+  filter: drop-shadow(0px -21px 0px #753200);
 }
 html body .helpPage .center .nav li.title .arrow_ic {
   width: 8px;
@@ -7189,14 +7233,16 @@ html body .helpPage .center .nav li.title .arrow_ic {
   transition: 0.3s all;
   transform: rotate(180deg);
   margin-right: 23px;
-  filter: grayscale(1) brightness(30);
 }
 html body .helpPage .center .nav li.box {
   display: none;
-  background: #763400;
+  background: #b36c40;
 }
 html body .helpPage .center .nav li.box.display {
   display: block;
+}
+html body .helpPage .center .nav li.box:last-child {
+  border-radius: 0 0 5px 5px;
 }
 html body .helpPage .center .nav li.box ul {
   width: 100%;
@@ -7215,8 +7261,8 @@ html body .helpPage .center .nav li.box ul li {
   color: #ffffff;
 }
 html body .helpPage .center .nav li.box ul li:hover, html body .helpPage .center .nav li.box ul li:active, html body .helpPage .center .nav li.box ul li.active {
-  background: #fbe2b7;
-  color: #672e01;
+  background: #632b00;
+  color: #fff7d8;
 }
 html body .helpPage .center .nav li.box ul li:hover::before, html body .helpPage .center .nav li.box ul li:active::before, html body .helpPage .center .nav li.box ul li.active::before {
   display: none;

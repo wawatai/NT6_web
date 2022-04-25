@@ -12,7 +12,7 @@
         justify-content: space-between;
         
         .nav {
-            background: $event_LeftBG;
+            background: $smallBG;
             width: 390px;
             height: auto;
             border: solid 1px $mainBorder_2;
@@ -21,6 +21,24 @@
             li {
                 width: 100%;
                 height: auto;
+                overflow: hidden;
+
+                &:nth-of-type(1) {
+                    
+                    &.title {
+                        border-radius: 5px 5px 0 0;
+                    }
+                }
+                &:nth-last-of-type(2) {
+
+                    &.title {
+                        border-radius: 0 0 5px 5px;
+
+                        &.active {
+                            border-radius: 0;
+                        }
+                    }
+                }
 
                 &:nth-last-of-type(2) {
 
@@ -37,19 +55,32 @@
                     height: 60px;
                     box-sizing: border-box;
                     cursor: pointer;
-                    border-bottom: solid 1px $mainBorder_2;
+                    border-bottom: solid 1px $mainBorder_1;
     
                     &:hover,&:active,&.active {
+                        background: $innerSide_HoverBG2;
     
                         .arrow_ic {
                             transform: rotate(270deg);
+                            filter: grayscale(1) brightness(30);
+                        }
+
+                        p {
+                            color: $title_1;
+                        }
+
+                        i {
+
+                            &::before {
+                                display: none;
+                            }
                         }
                     }
     
                     p {
                         display: flex;
                         align-items: center;
-                        color: $title_1;
+                        color: $title_2;
                         font-size: 22px;
                         font-weight: bold;
     
@@ -58,13 +89,35 @@
                             width: 20px;
                             height: 24px;
                             margin-right: 23px;
+                            position: relative;
+                            overflow: hidden;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                left: 0;
+                                top: 24px;
+                                filter: drop-shadow(0px -24px 0px #753200);
+                            }
 
                             &.aboutUs {
                                 height: 28px;
+
+                                &::before {
+                                    top: 28px;
+                                    filter: drop-shadow(0px -28px 0px #753200);
+                                }
                             }
 
                             &.downloadIC {
                                 height: 21px;
+
+                                &::before {
+                                    top: 21px;
+                                    filter: drop-shadow(0px -21px 0px #753200);
+                                }
                             }
                         }
                     }
@@ -75,7 +128,6 @@
                         transition: 0.3s all;
                         transform: rotate(180deg);
                         margin-right: 23px;
-                        filter: grayscale(1) brightness(30);
                     }
                 }
 
@@ -85,6 +137,10 @@
 
                     &.display {
                         display: block;
+                    }
+
+                    &:last-child {
+                        border-radius: 0 0 5px 5px;
                     }
 
                     ul {
