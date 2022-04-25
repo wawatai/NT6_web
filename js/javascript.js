@@ -591,7 +591,7 @@ $(function(){
     })
     $(pv).click(function(){
         n --;
-        $(depWay).css("transform","translateX("+(-290 * n)+"px)");
+        $(depWay).css("transform","translateX("+(-50 * n)+"px)");
 
         if(n == -1){
             $(depWay).css("transform","translateX(0px)");
