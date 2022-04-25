@@ -29,11 +29,6 @@ header .forget i {
   background-size: 100%;
 }
 
-header .transferInfo .money i {
-  background: url("../images/icon/svg/loading_g.svg") no-repeat;
-  background-size: 100%;
-}
-
 header .user.alLogin i {
   background: url("../images/icon/headerIC.png") no-repeat;
   background-size: 300%;
@@ -57,6 +52,11 @@ header .user.alLogin i.exit_ic {
 header .marqueeArea .people_ic {
   background: url("../images/icon/peopleIC.png") no-repeat;
   background-size: contain;
+}
+
+header .transferInfo .money i {
+  background: url("../images/icon/svg/loading_g.svg") no-repeat;
+  background-size: 100%;
 }
 
 .topGameList .prev, .topGameList .next {
@@ -1932,7 +1932,7 @@ html body .filter .jumpWindow.loading .content p {
   text-align: center;
   font-size: 14px;
   font-weight: bold;
-  color: #fff7d8;
+  color: #281600;
   margin-top: 20px;
 }
 @keyframes loading {
@@ -3297,6 +3297,9 @@ html body .innerPage .center .vipWrap.display {
 }
 html body .innerPage .center .vipWrap.innerMode {
   padding: 24px 0 30px;
+  background: #f6ebadbf;
+  border-radius: 5px;
+  border: solid 1px #fff8e2;
 }
 html body .innerPage .center .vipWrap .top {
   width: 100%;
@@ -3485,6 +3488,7 @@ html body .innerPage .center .vipWrap .levelEnjoy .more {
   font-size: 15px;
   font-weight: bold;
   display: block;
+  cursor: pointer;
 }
 html body .innerPage .center .vipWrap .levelEnjoy .more:hover, html body .innerPage .center .vipWrap .levelEnjoy .more:active, html body .innerPage .center .vipWrap .levelEnjoy .more.active {
   background: linear-gradient(to bottom, #7b3806 0%, #b16d3d 99%);
@@ -3652,7 +3656,7 @@ html body .innerPage .center .vipWrap .msgBox {
 html body .innerPage .center .vipWrap .msgBox li {
   font-size: 15px;
   color: #281600;
-  list-style: cjk-ideographic;
+  list-style: decimal;
   line-height: 20px;
   margin-bottom: 10px;
 }
@@ -4156,6 +4160,7 @@ html body .innerPage .center .rightSide .smallBoard .title .more {
   padding: 6px 0;
   font-size: 12px;
   margin-top: 5px;
+  cursor: pointer;
 }
 html body .innerPage .center .rightSide .smallBoard .title .more:hover, html body .innerPage .center .rightSide .smallBoard .title .more:active, html body .innerPage .center .rightSide .smallBoard .title .more.active {
   background: linear-gradient(to top, #1eb0a4 0%, #159288 100%);
@@ -4251,7 +4256,7 @@ html body .innerPage .center .rightSide .smallBoard .list .noData {
   height: 307px;
   align-items: center;
   justify-content: center;
-  color: #fff7d8;
+  color: #919191;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -5040,6 +5045,10 @@ html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .t
   overflow: hidden;
   box-shadow: 0 0 0 1px #713100;
   margin-top: 25px;
+  display: none;
+}
+html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .tableWrap table.display {
+  display: table;
 }
 html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .tableWrap table tr:last-child td {
   border-bottom: none;
@@ -5135,12 +5144,12 @@ html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .t
 html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .tableWrap .noData {
   display: none;
   width: 100%;
-  height: 248px;
+  height: 233px;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
   letter-spacing: 1px;
-  color: #fff7d8;
+  color: #919191;
+  font-weight: bold;
 }
 html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .tableWrap .noData.display {
   display: flex;
@@ -5358,7 +5367,7 @@ html body .innerPage .center .dealWrap .bottom .dealBox .reviewWrap .fakeTable .
   align-items: center;
   justify-content: center;
   letter-spacing: 1px;
-  color: #fff7d8;
+  color: #919191;
   font-weight: bold;
 }
 html body .innerPage .center .dealWrap .bottom .dealBox .reviewWrap .fakeTable .noData.display {
@@ -5371,6 +5380,10 @@ html body .innerPage .center .dealWrap .bottom .dealBox .reviewWrap .fakeTable t
   border-radius: 5px;
   box-shadow: 0 0 0 1px #713100;
   overflow: hidden;
+  display: none;
+}
+html body .innerPage .center .dealWrap .bottom .dealBox .reviewWrap .fakeTable table.display {
+  display: table;
 }
 html body .innerPage .center .dealWrap .bottom .dealBox .reviewWrap .fakeTable table tr {
   border-bottom: solid 1px #bf9755;
@@ -5686,6 +5699,19 @@ html body .innerPage .center .betWrap .fakeTable .smallTitle {
   font-weight: bold;
   padding-top: 15px;
 }
+html body .innerPage .center .betWrap .fakeTable .noData {
+  display: none;
+  width: 100%;
+  height: 233px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  color: #919191;
+  font-weight: bold;
+}
+html body .innerPage .center .betWrap .fakeTable .noData.display {
+  display: flex;
+}
 html body .innerPage .center .betWrap .fakeTable ul {
   width: 100%;
   height: auto;
@@ -5693,6 +5719,10 @@ html body .innerPage .center .betWrap .fakeTable ul {
   border: solid 1px #713100;
   border-radius: 5px;
   overflow: hidden;
+  display: none;
+}
+html body .innerPage .center .betWrap .fakeTable ul.display {
+  display: block;
 }
 html body .innerPage .center .betWrap .fakeTable ul li {
   width: 100%;
@@ -5816,20 +5846,6 @@ html body .innerPage .center .betWrap .fakeTable ul li table tr td:nth-of-type(4
 html body .innerPage .center .betWrap .fakeTable ul li table tr td:nth-of-type(6) {
   width: 14%;
 }
-html body .innerPage .center .betWrap .noData {
-  display: none;
-  width: 100%;
-  height: 348px;
-  margin-top: 20px;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: 1px;
-  color: #fff7d8;
-  font-weight: bold;
-}
-html body .innerPage .center .betWrap .noData.display {
-  display: flex;
-}
 html body .innerPage .center .depositWrap {
   display: flex;
 }
@@ -5905,26 +5921,13 @@ html body .innerPage .center .depositWrap .depositMiddle .top .list i.next {
 html body .innerPage .center .depositWrap .depositMiddle .top .list .box {
   width: 95%;
   height: auto;
-  overflow-x: auto;
-  margin-top: 10px;
-  padding-bottom: 5px;
-}
-html body .innerPage .center .depositWrap .depositMiddle .top .list .box::-webkit-scrollbar {
-  margin-top: 5px;
-  height: 5px;
-}
-html body .innerPage .center .depositWrap .depositMiddle .top .list .box::-webkit-scrollbar-thumb {
-  background: linear-gradient(to right, #af5d1c 0%, #6b2f00 100%);
-  border-radius: 5px;
-}
-html body .innerPage .center .depositWrap .depositMiddle .top .list .box::-webkit-scrollbar-track {
-  background: #cccccc;
-  border-radius: 5px;
+  overflow: hidden;
 }
 html body .innerPage .center .depositWrap .depositMiddle .top .list .box ul {
   width: 100%;
   height: auto;
   display: flex;
+  transition: 0.3s all;
 }
 html body .innerPage .center .depositWrap .depositMiddle .top .list .box ul li {
   width: auto;
@@ -6858,6 +6861,7 @@ html body .innerPage .center .inviteWrap .bottom .box {
 html body .innerPage .center .inviteWrap .bottom .box .left {
   width: auto;
   height: auto;
+  flex-shrink: 0;
 }
 html body .innerPage .center .inviteWrap .bottom .box .left .row {
   display: flex;
@@ -6869,11 +6873,11 @@ html body .innerPage .center .inviteWrap .bottom .box .left .row p {
   font-weight: bold;
 }
 html body .innerPage .center .inviteWrap .bottom .box .left .row p:nth-of-type(1) {
-  width: 80px;
+  width: 120px;
   color: #753200;
 }
 html body .innerPage .center .inviteWrap .bottom .box .left .row p:nth-of-type(2) {
-  width: 190px;
+  width: 339px;
   color: #281600;
 }
 html body .innerPage .center .inviteWrap .bottom .box .left .row p:nth-of-type(2) input {
@@ -6887,6 +6891,7 @@ html body .innerPage .center .inviteWrap .bottom .box .left .row p:nth-of-type(2
   border-radius: 3px;
   box-sizing: border-box;
   padding-left: 15px;
+  font-size: 12px;
 }
 html body .innerPage .center .inviteWrap .bottom .box .left .row p:nth-of-type(2) input::placeholder {
   color: #ad6026;
@@ -6912,7 +6917,6 @@ html body .innerPage .center .inviteWrap .bottom .box .right {
   align-items: center;
   width: 300px;
   justify-content: space-between;
-  margin-right: 200px;
 }
 html body .innerPage .center .inviteWrap .bottom .box .right p {
   font-size: 14px;
@@ -7056,12 +7060,29 @@ html body .innerPage .center .pointWrap .bottom .content .box {
   box-sizing: border-box;
   padding: 30px 20px;
 }
+html body .innerPage .center .pointWrap .bottom .content .box .noData {
+  display: none;
+  width: 100%;
+  height: 233px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  color: #919191;
+  font-weight: bold;
+}
+html body .innerPage .center .pointWrap .bottom .content .box .noData.display {
+  display: flex;
+}
 html body .innerPage .center .pointWrap .bottom .content .box table {
   width: 100%;
   height: auto;
   overflow: hidden;
   border-radius: 5px;
   box-shadow: 0 0 0 1px #713100;
+  display: none;
+}
+html body .innerPage .center .pointWrap .bottom .content .box table.display {
+  display: table;
 }
 html body .innerPage .center .pointWrap .bottom .content .box table tr:last-child td {
   border: none;

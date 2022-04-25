@@ -16,11 +16,6 @@ header .forget i {
     background: url('../images/icon/svg/question.svg') no-repeat;
     background-size: 100%;
 }
-//header 登入後下選單旋轉圖
-header .transferInfo .money i {
-    background: url('../images/icon/svg/loading_g.svg') no-repeat;
-    background-size: 100%;
-}
 //header登入後IC
 header .user.alLogin i {
     background: url('../images/icon/headerIC.png') no-repeat;
@@ -42,6 +37,11 @@ header .user.alLogin i.exit_ic {
 header .marqueeArea .people_ic {
     background: url('../images/icon/peopleIC.png') no-repeat;
     background-size: contain;
+}
+//header 登入後下選單旋轉圖
+header .transferInfo .money i {
+    background: url('../images/icon/svg/loading_g.svg') no-repeat;
+    background-size: 100%;
 }
 
 //下拉選單 topGameList arrow

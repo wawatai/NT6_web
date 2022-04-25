@@ -730,6 +730,9 @@
 
             &.innerMode {
                 padding: 24px 0 30px;
+                background: $mainBG_2;
+                border-radius: 5px;
+                border: solid 1px $mainBorder_2;
             }
 
             .top {
@@ -926,6 +929,7 @@
                     margin: 40px auto 44px;
                     @include secondBtn;
                     display: block;
+                    cursor: pointer;
                 }
             }
 
@@ -1114,7 +1118,7 @@
                 li {
                     font-size: 15px;
                     color: $mainFont_1;
-                    list-style: cjk-ideographic;
+                    list-style: decimal;
                     line-height: 20px;
                     margin-bottom: 10px;
                 }
@@ -1588,6 +1592,7 @@
                         padding: 6px 0;
                         font-size: 12px;
                         margin-top: 5px;
+                        cursor: pointer;
                     }
                 }
 
@@ -1697,7 +1702,7 @@
                         height: 307px;
                         align-items: center;
                         justify-content: center;
-                        color: $title_1;
+                        color: $disable;
                         font-weight: bold;
                         letter-spacing: 1px;
 
@@ -2397,6 +2402,11 @@
                                 overflow: hidden;
                                 box-shadow: 0 0 0 1px $tableList_Border;
                                 margin-top: 25px;
+                                display: none;
+
+                                &.display {
+                                    display: table;
+                                }
 
                                 tr {
 
@@ -2528,13 +2538,13 @@
                             .noData {
                                 display: none;
                                 width: 100%;
-                                height: 248px;
+                                height: 233px;
                                 align-items: center;
                                 justify-content: center;
-                                font-weight: bold;
                                 letter-spacing: 1px;
-                                color: $title_1;
-
+                                color: $disable;
+                                font-weight: bold;
+            
                                 &.display {
                                     display: flex;
                                 }
@@ -2710,7 +2720,7 @@
                                 align-items: center;
                                 justify-content: center;
                                 letter-spacing: 1px;
-                                color: $title_1;
+                                color: $disable;
                                 font-weight: bold;
 
                                 &.display {
@@ -2725,6 +2735,11 @@
                                 border-radius: 5px;
                                 box-shadow: 0 0 0 1px $tableList_Border;
                                 overflow: hidden;
+                                display: none;
+
+                                &.display {
+                                    display: table;
+                                }
 
                                 tr {
                                     border-bottom: solid 1px $mainBorder_1;
@@ -3024,6 +3039,21 @@
                     padding-top: 15px;
                 }
 
+                .noData {
+                    display: none;
+                    width: 100%;
+                    height: 233px;
+                    align-items: center;
+                    justify-content: center;
+                    letter-spacing: 1px;
+                    color: $disable;
+                    font-weight: bold;
+
+                    &.display {
+                        display: flex;
+                    }
+                }
+
                 ul {
                     width: 100%;
                     height: auto;
@@ -3031,6 +3061,11 @@
                     border: solid 1px $tableList_Border;
                     border-radius: 5px;
                     overflow: hidden;
+                    display: none;
+
+                    &.display {
+                        display: block;
+                    }
 
                     li {
                         width: 100%;
@@ -3196,22 +3231,6 @@
                     }
                 }
             }
-
-            .noData {
-                display: none;
-                width: 100%;
-                height: 348px;
-                margin-top: 20px;
-                align-items: center;
-                justify-content: center;
-                letter-spacing: 1px;
-                color: $title_1;
-                font-weight: bold;
-
-                &.display {
-                    display: flex;
-                }
-            }
         }
 
         //deposit
@@ -3289,29 +3308,13 @@
                         .box {
                             width: 95%;
                             height: auto;
-                            overflow-x: auto;
-                            margin-top: 10px;
-                            padding-bottom: 5px;
-                            
-                            &::-webkit-scrollbar {
-                                margin-top: 5px;
-                                height: 5px;
-                            }
-
-                            &::-webkit-scrollbar-thumb {
-                                background: $scrollBar_Thumb;
-                                border-radius: 5px;
-                            }
-
-                            &::-webkit-scrollbar-track {
-                                background: $scrollBar_BG;
-                                border-radius: 5px;
-                            }
+                            overflow: hidden;
 
                             ul {
                                 width: 100%;
                                 height: auto;
                                 display: flex;
+                                transition: 0.3s all;
 
                                 li {
                                     width: auto;
@@ -4180,6 +4183,7 @@
                     .left {
                         width: auto;
                         height: auto;
+                        flex-shrink: 0;
     
                         .row {
                             display: flex;
@@ -4191,18 +4195,19 @@
                                 font-weight: bold;
     
                                 &:nth-of-type(1) {
-                                    width: 80px;
+                                    width: 120px;
                                     color: $title_2;
                                 }
     
                                 &:nth-of-type(2) {
-                                    width: 190px;
+                                    width: 339px;
                                     color: $mainFont_1;
     
                                     input {
                                         width: 100%;
                                         height: 36px;
                                         @include mainInput;
+                                        font-size: 12px;
                                     }
                                 }
                             }
@@ -4221,7 +4226,6 @@
                         align-items: center;
                         width: 300px;
                         justify-content: space-between;
-                        margin-right: 200px;
     
                         p {
                             font-size: 14px;
@@ -4350,12 +4354,32 @@
                         box-sizing: border-box;
                         padding: 30px 20px;
 
+                        .noData {
+                            display: none;
+                            width: 100%;
+                            height: 233px;
+                            align-items: center;
+                            justify-content: center;
+                            letter-spacing: 1px;
+                            color: $disable;
+                            font-weight: bold;
+
+                            &.display {
+                                display: flex;
+                            }
+                        }
+
                         table {
                             width: 100%;
                             height: auto;
                             overflow: hidden;
                             border-radius: 5px;
                             box-shadow: 0 0 0 1px $tableList_Border;
+                            display: none;
+
+                            &.display {
+                                display: table;
+                            }
 
                             tr {
 

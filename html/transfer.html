@@ -427,7 +427,7 @@
                                                 Ví chính
                                                 <i class="reset_ic"></i>
                                             </p>
-                                            <button>Chuyển điểm về ví chính</button>
+                                            <button onclick="loading()">Chuyển điểm về ví chính</button>
                                         </div>
                                         <div class="amount">$9883</div>
                                     </div>
@@ -528,14 +528,14 @@
                                     <div class="inputBox">
                                         <input type="text" placeholder="0">
                                         <div class="btnBox">
-                                            <button>$100</button>
-                                            <button>$500</button>
-                                            <button>$1000</button>
-                                            <button>$3000</button>
-                                            <button>$5000</button>
-                                            <button>$10000</button>
-                                            <button>Tất cả</button>
-                                            <button class="check">Xác nhận chuyển điểm</button>
+                                            <button type="button">$100</button>
+                                            <button type="button">$500</button>
+                                            <button type="button">$1000</button>
+                                            <button type="button">$3000</button>
+                                            <button type="button">$5000</button>
+                                            <button type="button">$10000</button>
+                                            <button type="button">Tất cả</button>
+                                            <button type="button" class="check" onclick="loading()">Xác nhận chuyển điểm</button>
                                         </div>
                                     </div>
                                 </div>
@@ -545,7 +545,7 @@
                             <div class="smallBoard">
                                 <div class="title">
                                     Lịch sử chuyển khoản
-                                    <p class="more">
+                                    <p class="more" onclick="window.location.href='./transfer.html'">
                                         Nhiều hơn.
                                         <i class="arrow"></i>
                                     </p>
@@ -809,7 +809,7 @@
         <!--loading-->
         <div class="jumpWindow loading">
             <div class="title">
-                <p>提示</p>
+                <p>Lời nhắcs</p>
             </div>
             <div class="content">
                 <div></div>

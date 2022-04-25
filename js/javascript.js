@@ -239,6 +239,15 @@ function openBoardGame(){
     $('.jumpWindow').removeClass('display');
     $('.filter,.betWindow.boardGame').addClass('display');
 }
+function loading(){
+    $('.jumpWindow').removeClass('display');
+    $('.filter,.loading').addClass('display');
+
+    setTimeout(function(){
+        $(".filter")
+        .removeClass("display");
+    },2000);
+}
 
 //gameWrap小遊戲格hover切換左大圖
 // $(function(){
@@ -562,5 +571,126 @@ $(function(){
     $(".registerWrap .choose li").click(function(){
         $(this).removeClass("display");
         $(this).siblings().addClass("display")
+    })
+})
+
+//deposit滑動
+$(function(){
+    var depWay = $('.depositWrap .box ul');
+
+    var n = 0;
+    var nt = $('.depositWrap .list .next');
+    var pv = $('.depositWrap .list .prev');
+    $(nt).click(function(){
+        n ++;
+        $(depWay).css("transform","translateX("+(-50 * n)+"px)");
+
+        if(n == 1){
+            n --;
+        }
+    })
+    $(pv).click(function(){
+        n --;
+        $(depWay).css("transform","translateX("+(-290 * n)+"px)");
+
+        if(n == -1){
+            $(depWay).css("transform","translateX(0px)");
+            n ++;
+        }
+    })
+})
+
+//交易紀錄切換date
+$(function(){
+    $(".dealWrap .search .btnBox button").click(function(){
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active");
+    })
+
+    $(".dealWrap .search .btnBox button:eq(1)").click(function(){
+        $(".dealWrap .dealBox .fakeTable table:eq(0)")
+        .addClass("display")
+        .siblings().removeClass("display");
+    })
+    $(".dealWrap .search .btnBox button:eq(0)").click(function(){
+        $(".dealWrap .dealBox .fakeTable table:eq(1)")
+        .addClass("display")
+        .siblings().removeClass("display");
+    })
+    $(".dealWrap .search .btnBox button:eq(2),.dealWrap .search .btnBox button:eq(3)").click(function(){
+        $(".dealWrap .dealBox .fakeTable .noData")
+        .addClass("display")
+        .siblings().removeClass("display");
+    })
+})
+
+//查詢紅利切換date
+$(function(){
+    $(".pointWrap .search .btnBox button").click(function(){
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active");
+    })
+
+    $(".pointWrap .search .btnBox button:eq(1)").click(function(){
+        $(".pointWrap .box table")
+        .addClass("display")
+        .siblings().removeClass("display");
+    })
+    $(".pointWrap .search .btnBox button:eq(1)").siblings().click(function(){
+        $(".pointWrap .box .noData")
+        .addClass("display")
+        .siblings().removeClass("display");
+    })
+})
+
+//投注紀錄切換date
+$(function(){
+    $(".betWrap .timeGroup .btnBox button").click(function(){
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active");
+    })
+
+    $(".betWrap .timeGroup .btnBox button:eq(1)").click(function(){
+        $(".betWrap .fakeTable ul:eq(0)")
+        .addClass("display")
+        .siblings().removeClass("display");
+    })
+    $(".betWrap .timeGroup .btnBox button:eq(0)").click(function(){
+        $(".betWrap .fakeTable ul:eq(1)")
+        .addClass("display")
+        .siblings().removeClass("display");
+    })
+    $(".betWrap .timeGroup .btnBox button:eq(2),.betWrap .timeGroup .btnBox button:eq(3)").click(function(){
+        $(".betWrap .fakeTable .noData")
+        .addClass("display")
+        .siblings().removeClass("display");
+    })
+})
+
+//優惠申請切換date
+$(function(){
+    $(".eventWrap .eventRecord .dateBtnBox button").click(function(){
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active");
+    })
+
+    $(".eventWrap .eventRecord .dateBtnBox button:eq(1)").click(function(){
+        $(".eventWrap .tableWrap table:eq(0)")
+        .addClass("display")
+        .siblings().removeClass("display");
+    })
+    $(".eventWrap .eventRecord .dateBtnBox button:eq(0)").click(function(){
+        $(".eventWrap .tableWrap table:eq(1)")
+        .addClass("display")
+        .siblings().removeClass("display");
+    })
+    $(".eventWrap .eventRecord .dateBtnBox button:eq(2),.eventWrap .eventRecord .dateBtnBox button:eq(3)").click(function(){
+        $(".eventWrap .tableWrap .noData")
+        .addClass("display")
+        .siblings().removeClass("display");
     })
 })

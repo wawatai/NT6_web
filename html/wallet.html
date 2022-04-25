@@ -422,7 +422,7 @@
                                     <div class="total">
                                         <div class="totalTitle">
                                             Ví chính
-                                            <button>Chuyển điểm về ví chính</button>
+                                            <button onclick="loading()">Chuyển điểm về ví chính</button>
                                         </div>
                                         <div class="amount">$500</div>
                                     </div>
@@ -515,7 +515,7 @@
                             <div class="smallBoard">
                                 <div class="title">
                                     Lịch sử đặt cược
-                                    <p class="more">Nhiều hơn.</p>
+                                    <p class="more" onclick="window.location.href='./deposit.html'">Nhiều hơn.</p>
                                 </div>
                                 <ul class="list">
                                     <li class="smallList">
@@ -536,7 +536,7 @@
                             <div class="smallBoard">
                                 <div class="title">
                                     KHUYẾN MÃI
-                                    <p class="more">Nhiều hơn.</p>
+                                    <p class="more" onclick="window.location.href='./eventApply.html'">Nhiều hơn.</p>
                                 </div>
                                 <ul class="list">
                                     <li>
@@ -774,6 +774,17 @@
                     </div>
                 </li>
             </ul>
+        </div>
+        <!--loading-->
+        <!--loading-->
+        <div class="jumpWindow loading">
+            <div class="title">
+                <p>Lời nhắcs</p>
+            </div>
+            <div class="content">
+                <div></div>
+                <p>loading...</p>
+            </div>
         </div>
     </div>
    <div class="bg"></div>
