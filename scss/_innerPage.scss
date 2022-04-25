@@ -3074,6 +3074,10 @@
                         padding: 1px;
                         box-sizing: border-box;
 
+                        &:nth-last-of-type(2) {
+                            border-bottom-color: $tableList_Border;
+                        }
+
                         &:last-child {
                             border: none;
                         }
@@ -3092,6 +3096,13 @@
                                 &:last-child {
                                     border: none;
                                 }
+                            }
+                        }
+
+                        &.end {
+                            
+                            .wordWrap {
+                                background: $tableList_TitleBG;
                             }
                         }
 

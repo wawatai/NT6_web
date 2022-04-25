@@ -5740,6 +5740,9 @@ html body .innerPage .center .betWrap .fakeTable ul li {
   padding: 1px;
   box-sizing: border-box;
 }
+html body .innerPage .center .betWrap .fakeTable ul li:nth-last-of-type(2) {
+  border-bottom-color: #713100;
+}
 html body .innerPage .center .betWrap .fakeTable ul li:last-child {
   border: none;
 }
@@ -5755,6 +5758,9 @@ html body .innerPage .center .betWrap .fakeTable ul li.title p {
 }
 html body .innerPage .center .betWrap .fakeTable ul li.title p:last-child {
   border: none;
+}
+html body .innerPage .center .betWrap .fakeTable ul li.end .wordWrap {
+  background: #fff8e2;
 }
 html body .innerPage .center .betWrap .fakeTable ul li.active {
   height: auto;
